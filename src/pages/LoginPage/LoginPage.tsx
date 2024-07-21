@@ -2,7 +2,11 @@
 import { LoginPageLayout } from "./LoginPage.styles";
 
 const LoginPage = () => {
-  return <LoginPageLayout>여기다 로직</LoginPageLayout>;
+  return (
+    <LoginPageLayout>
+      여기다 로직 컴포넌트 + 스타일링 컴포넌트 합치기
+    </LoginPageLayout>
+  );
 };
 
 export default LoginPage;
