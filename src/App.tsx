@@ -17,9 +17,6 @@ function App() {
           <MobileLayout>
             <BrowserRouter>
               <Header />
-              <Header />
-              <Header />
-              <Header />
               <Routes>
                 <Route path="/login" element={<LoginPage />}></Route>
               </Routes>
