@@ -11,7 +11,7 @@ const Header = () => {
     console.log(location.error.message);
   }
 
-  return <Style.HeaderLayout>헤더임</Style.HeaderLayout>;
+  return <Style.Layout>헤더임</Style.Layout>;
 };
 
 export default Header;

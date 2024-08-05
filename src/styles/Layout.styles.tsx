@@ -7,8 +7,10 @@ export const MainLayout = styled.main`
 `;
 
 export const MobileLayout = styled.div`
-  max-width: 390px; // 피그마 보고 수정 예정
+  max-width: 390px;
   min-width: 320px; // 피그마 보고 수정 예정
+  height: 100%;
+  padding: 0px 16px;
   margin: 0 auto;
   background-color: aliceblue;
 `;

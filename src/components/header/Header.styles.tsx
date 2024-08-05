@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const HeaderLayout = styled.header`
+export const Layout = styled.header`
   width: 100%;
-  height: 500px;
+  height: 110px; //임시
   color: black;
   background-color: #ffacac5e;
 `;
