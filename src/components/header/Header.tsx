@@ -1,5 +1,6 @@
 import useGeoLocation from "../../hooks/useGeoLocation";
 import * as Style from "./Header.styles";
+import { Text } from "../../common/Text";
 
 //현재 페이지를 추적해서 login페이지인지 아닌지 판단 로직 필요
 //로그인 페이지의 Header는 기본 Header랑 다름
@@ -11,7 +12,11 @@ const Header = () => {
     console.log(location.error.message);
   }
 
-  return <Style.Layout>헤더임</Style.Layout>;
+  return (
+    <Style.Layout>
+      <Text>헤더임</Text>
+    </Style.Layout>
+  );
 };
 
 export default Header;
