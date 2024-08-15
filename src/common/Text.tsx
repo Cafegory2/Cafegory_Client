@@ -6,7 +6,6 @@ export const Text = styled.p<{
   $color?: string;
 }>`
   font-size: ${(props) => (props.$fontSize ? props.$fontSize : 14)}px;
-  font-weight: ${(props) => (props.$fontWeight ? props.$fontWeight : 300)};
+  font-weight: ${(props) => (props.$fontWeight ? props.$fontWeight : 400)};
   color: ${(props) => (props.$color ? props.$color : "black")};
-  text-align: center;
 `;

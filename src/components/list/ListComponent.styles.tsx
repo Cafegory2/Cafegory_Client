@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Color } from "../../constants";
 
 export const Container = styled.div`
   width: 100%;
@@ -27,22 +28,32 @@ export const ContainerRight = styled.div`
   background-color: #56e97b89;
 `;
 
-export const LeftTag = styled.div`
+export const TagContainer = styled.div`
   width: 100%;
-  height: 10%;
+  height: 15%;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 10px;
 `;
 
-export const LeftTitle = styled.div`
-  width: 100%;
-  height: 30%;
+export const Tag = styled.div`
+  padding: 4px 8px;
+  display: inline-flex;
+  background-color: ${Color.MonoTag};
+  border-radius: 22px;
 `;
 
-export const LeftInfo = styled.div`
+export const TitleContainer = styled.div`
   width: 100%;
-  height: 60%;
+  height: 20%;
   display: flex;
+  align-items: center;
+`;
+
+export const InfoContainer = styled.div`
+  width: 100%;
+  height: 65%;
   flex-direction: column;
 `;
 
@@ -56,16 +67,20 @@ export const InfoDetail = styled.div`
 export const InfoDetailTitle = styled.div`
   width: 25%;
   height: 100%;
+  display: flex;
+  align-items: flex-end;
 `;
 
 export const InfoDetailDetail = styled.div`
   width: 75%;
   height: 100%;
+  display: flex;
+  align-items: flex-end;
 `;
 
 export const ViewCount = styled.div`
   width: auto;
   position: absolute;
   right: 10px;
-  bottom: 10px;
+  bottom: 20px;
 `;
