@@ -4,11 +4,11 @@ import { Text } from "../../common/Text";
 import { Color } from "../../constants";
 import KakaoLogin from "../../components/login/KakaoLogin";
 import GoogleLogin from "../../components/login/GoogleLogin";
-import { MainLayout } from "../../styles/Layout.styles";
+import { LoginLayout } from "../../styles/Layout.styles";
 
 const LoginPage = () => {
   return (
-    <MainLayout>
+    <LoginLayout>
       <Style.SectionTop>
         <img src={Logo} alt="Logo" style={{ width: "40%" }} />
       </Style.SectionTop>
@@ -18,7 +18,7 @@ const LoginPage = () => {
         <KakaoLogin />
         <GoogleLogin />
       </Style.SectionBottom>
-    </MainLayout>
+    </LoginLayout>
   );
 };
 

@@ -27,8 +27,14 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, main {
 	display: block;
 }
+html{
+	width: 100%;
+	height: 100%;
+}
 body {
 	line-height: 1;
+	width: 100%;
+	height: 100%;
 }
 p{
 	font-family: 'Noto Sans KR', 'Roboto'; 
@@ -51,6 +57,10 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+#root{
+	width: 100%;
+	height: 100%;
 }
 `;
 
