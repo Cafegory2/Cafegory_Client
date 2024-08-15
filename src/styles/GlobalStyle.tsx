@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { fonts } from "./fonts";
 const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -17,17 +18,20 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: 'inherit';
 	vertical-align: baseline;
 	box-sizing: border-box;
 }
+${fonts}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav, section, main {
 	display: block;
 }
 body {
 	line-height: 1;
+}
+p{
+	font-family: 'Noto Sans KR', 'Roboto'; 
 }
 a {
 	text-decoration: none;
@@ -48,7 +52,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 `;
 
 export default GlobalStyle;

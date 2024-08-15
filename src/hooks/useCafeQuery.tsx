@@ -8,7 +8,8 @@ const fetchCafeList = async () => {
   return response.data;
 };
 
-export const useCafeListQuery = () => {
+//카페 리스트 불러오는 커스텀 훅
+export const useCafeQuery = () => {
   const {
     isLoading: isCafeListLoading,
     isError: isCafeListError,
