@@ -12,7 +12,7 @@ export const MobileLayout = styled.div`
 
 export const LoginLayout = styled.div`
   width: 100%;
-  height: calc(100vh - 110px);
+  height: calc(100vh - min(max(8vh, 60px), 100px));
 `;
 
 export const MainLayout = styled.div`

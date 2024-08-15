@@ -1,5 +1,5 @@
 import * as Style from "./ListComponent.styles";
-import { Text } from "../../common/Text";
+import { TitleText1, BodyText1, BodyText2, TagText2 } from "../../common/Text";
 import { Color } from "../../constants";
 
 const ListComponent = () => {
@@ -10,57 +10,54 @@ const ListComponent = () => {
       <Style.ContainerLeft>
         <Style.TagContainer>
           <Style.Tag style={{ backgroundColor: `${statusTagColor}` }}>
-            <Text $fontSize={10} $color={statusTagText} $fontWeight={700}>
-              #모집중
-            </Text>
+            <TagText2 $color={statusTagText}>#모집중</TagText2>
           </Style.Tag>
           <Style.Tag>
-            <Text $fontSize={10} $color={Color.MonoTagText} $fontWeight={700}>
-              #디자인
-            </Text>
+            <TagText2 $color={Color.MonoTagText}>#디자인</TagText2>
           </Style.Tag>
           <Style.Tag>
-            <Text $fontSize={10} $color={Color.MonoTagText} $fontWeight={700}>
-              #대화환영!
-            </Text>
+            <TagText2 $color={Color.MonoTagText}>#대화환영!</TagText2>
           </Style.Tag>
         </Style.TagContainer>
         <Style.TitleContainer>
-          <Text $fontSize={22} $fontWeight={700}>
-            스타벅스 카공 모집
-          </Text>
+          <TitleText1>스타벅스 카공 모집</TitleText1>
         </Style.TitleContainer>
         <Style.InfoContainer>
           <Style.InfoDetail>
             <Style.InfoDetailTitle>
-              <Text>장소</Text>
+              <BodyText1>장소</BodyText1>
             </Style.InfoDetailTitle>
             <Style.InfoDetailDetail>
-              <Text>스타벅스 역삼역점</Text>
+              <BodyText1>스타벅스 역삼역점</BodyText1>
             </Style.InfoDetailDetail>
           </Style.InfoDetail>
           <Style.InfoDetail>
             <Style.InfoDetailTitle>
-              <Text>시간</Text>
+              <BodyText1>시간</BodyText1>
             </Style.InfoDetailTitle>
             <Style.InfoDetailDetail>
-              <Text>8월 13일 14시 ~ 16시</Text>
+              <BodyText1>8월 13일 14시 ~ 16시</BodyText1>
             </Style.InfoDetailDetail>
           </Style.InfoDetail>
           <Style.InfoDetail>
             <Style.InfoDetailTitle>
-              <Text>작성자</Text>
+              <BodyText1>작성자</BodyText1>
             </Style.InfoDetailTitle>
             <Style.InfoDetailDetail>
-              <Text>수박바</Text>
+              <BodyText1>수박바</BodyText1>
             </Style.InfoDetailDetail>
           </Style.InfoDetail>
         </Style.InfoContainer>
         <Style.ViewCount>
-          <Text $fontSize={10}>조회수: 120</Text>
+          <BodyText2>조회수: 120</BodyText2>
         </Style.ViewCount>
       </Style.ContainerLeft>
-      <Style.ContainerRight></Style.ContainerRight>
+      <Style.ContainerRight>
+        <Style.ImageContainer></Style.ImageContainer>
+        <Style.HeadCount>
+          <TagText2>인원(2/4)</TagText2>
+        </Style.HeadCount>
+      </Style.ContainerRight>
     </Style.Container>
   );
 };
