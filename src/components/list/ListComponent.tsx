@@ -1,36 +1,63 @@
 import * as Style from "./ListComponent.styles";
+import { TitleText1, BodyText1, BodyText2, TagText2 } from "../../common/Text";
+import { Color } from "../../constants";
 
 const ListComponent = () => {
+  const statusTagColor = Color.GreenTag;
+  const statusTagText = Color.GreenTagText;
   return (
     <Style.Container>
       <Style.ContainerLeft>
-        <Style.LeftTag>
-          <p>#모집중</p>
-          <p>#디자인</p>
-          <p>#대화환영!</p>
-        </Style.LeftTag>
-        <Style.LeftTitle>
-          <p>스타벅스 카공 모집</p>
-        </Style.LeftTitle>
-        <Style.LeftInfo>
+        <Style.TagContainer>
+          <Style.Tag style={{ backgroundColor: `${statusTagColor}` }}>
+            <TagText2 $color={statusTagText}>#모집중</TagText2>
+          </Style.Tag>
+          <Style.Tag>
+            <TagText2 $color={Color.MonoTagText}>#디자인</TagText2>
+          </Style.Tag>
+          <Style.Tag>
+            <TagText2 $color={Color.MonoTagText}>#대화환영!</TagText2>
+          </Style.Tag>
+        </Style.TagContainer>
+        <Style.TitleContainer>
+          <TitleText1>스타벅스 카공 모집</TitleText1>
+        </Style.TitleContainer>
+        <Style.InfoContainer>
           <Style.InfoDetail>
-            <Style.InfoDetailTitle>장소</Style.InfoDetailTitle>
-            <Style.InfoDetailDetail>스타벅스 역삼역점</Style.InfoDetailDetail>
-          </Style.InfoDetail>
-          <Style.InfoDetail>
-            <Style.InfoDetailTitle>시간</Style.InfoDetailTitle>
+            <Style.InfoDetailTitle>
+              <BodyText1>장소</BodyText1>
+            </Style.InfoDetailTitle>
             <Style.InfoDetailDetail>
-              8월 13일 14시 ~ 16시
+              <BodyText1>스타벅스 역삼역점</BodyText1>
             </Style.InfoDetailDetail>
           </Style.InfoDetail>
           <Style.InfoDetail>
-            <Style.InfoDetailTitle>작성자</Style.InfoDetailTitle>
-            <Style.InfoDetailDetail>수박바</Style.InfoDetailDetail>
+            <Style.InfoDetailTitle>
+              <BodyText1>시간</BodyText1>
+            </Style.InfoDetailTitle>
+            <Style.InfoDetailDetail>
+              <BodyText1>8월 13일 14시 ~ 16시</BodyText1>
+            </Style.InfoDetailDetail>
           </Style.InfoDetail>
-        </Style.LeftInfo>
-        <Style.ViewCount>조회수: 120</Style.ViewCount>
+          <Style.InfoDetail>
+            <Style.InfoDetailTitle>
+              <BodyText1>작성자</BodyText1>
+            </Style.InfoDetailTitle>
+            <Style.InfoDetailDetail>
+              <BodyText1>수박바</BodyText1>
+            </Style.InfoDetailDetail>
+          </Style.InfoDetail>
+        </Style.InfoContainer>
+        <Style.ViewCount>
+          <BodyText2>조회수: 120</BodyText2>
+        </Style.ViewCount>
       </Style.ContainerLeft>
-      <Style.ContainerRight></Style.ContainerRight>
+      <Style.ContainerRight>
+        <Style.ImageContainer></Style.ImageContainer>
+        <Style.HeadCount>
+          <TagText2>인원(2/4)</TagText2>
+        </Style.HeadCount>
+      </Style.ContainerRight>
     </Style.Container>
   );
 };

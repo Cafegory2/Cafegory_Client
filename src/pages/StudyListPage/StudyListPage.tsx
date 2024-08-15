@@ -8,6 +8,10 @@ const StudyListPage = () => {
       <ListComponent />
       <ListComponent />
       <ListComponent />
+      <ListComponent />
+      <ListComponent />
+      <ListComponent />
+      <ListComponent />
     </MainLayout>
   );
 };

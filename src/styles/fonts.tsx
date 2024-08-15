@@ -1,6 +1,7 @@
 import { css } from "styled-components";
 
 import NotoSansRegular from "../fonts/NotoSansKR-Regular.woff";
+import NotoSansBold from "../fonts/NotoSansKR-Bold.woff";
 
 export const fonts = css`
   @font-face {
@@ -40,6 +41,6 @@ export const fonts = css`
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: local("NotoSansKR"), url(${NotoSansRegular}) format("woff");
+    src: local("NotoSansKR"), url(${NotoSansBold}) format("woff");
   }
 `;
