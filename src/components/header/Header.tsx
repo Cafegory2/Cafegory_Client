@@ -70,9 +70,6 @@ const Header = () => {
             <Style.MenuItem>메뉴 1</Style.MenuItem>
             <Style.MenuItem>메뉴 2</Style.MenuItem>
             <Style.MenuItem>메뉴 3</Style.MenuItem>
-            <Style.MenuItem>메뉴 1</Style.MenuItem>
-            <Style.MenuItem>메뉴 2</Style.MenuItem>
-            <Style.MenuItem>메뉴 3</Style.MenuItem>
           </Style.Menu>
         </Style.MenuOverlay>
       )}
