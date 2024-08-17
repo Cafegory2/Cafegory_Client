@@ -1,26 +1,9 @@
 {
-  "overrides": [
-    {
-      "files": "*.ts",
-      "options": {
-        "singleQuote": false,
-        "parser": "typescript",
-        "semi": true,
-        "useTabs": false,
-        "tabWidth": 2,
-        "trailingComma": "all",
-        "printWidth": 120
-      }
-    },
-    {
-      "files": "*.html",
-      "options": {
-        "parser": "html",
-        "semi": true,
-        "useTabs": false,
-        "tabWidth": 2,
-        "printWidth": 120
-      }
-    }
-  ]
+  "singleQuote": false, 
+  "parser": "typescript",
+  "semi": true, 
+  "useTabs": false, 
+  "tabWidth": 2, 
+  "trailingComma": "all", 
+  "printWidth": 120
 }
