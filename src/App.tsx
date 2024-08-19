@@ -6,7 +6,9 @@ import { MobileLayout } from "./styles/Layout.styles";
 import Header from "./components/header/Header";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RedirectPage from "./pages/RedirectPage/RedirectPage";
-import StudyListPage from "./pages/StudyListPage/StudyListPage";
+import CafeStudyListPage from "./pages/CafeStudyPage/CafeStudyListPage";
+import CafeStudyDetailPage from "./pages/CafeStudyPage/CafeStudyDetailPage";
+import "./styles/fonts.css";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +23,16 @@ function App() {
             <Routes>
               <Route path="/login" element={<LoginPage />}></Route>
               <Route path="/oauth" element={<RedirectPage />}></Route>
-              <Route path="/studylist" element={<StudyListPage />}></Route>
+              <Route path="/cafestudy">
+                <Route
+                  path="/cafestudy/lists"
+                  element={<CafeStudyListPage />}
+                ></Route>
+                <Route
+                  path="/cafestudy/detail"
+                  element={<CafeStudyDetailPage />}
+                ></Route>
+              </Route>
             </Routes>
           </BrowserRouter>
         </MobileLayout>

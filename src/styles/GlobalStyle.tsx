@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { fonts } from "./fonts";
 const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -21,7 +20,6 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	box-sizing: border-box;
 }
-${fonts}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section, main {
@@ -32,7 +30,7 @@ html{
 	height: 100%;
 }
 body {
-	line-height: 1;
+	line-height: normal;
 	width: 100%;
 	height: 100%;
 }

@@ -6,7 +6,8 @@ export const Container = styled.div`
   height: 162px;
   border-radius: 10px;
   margin: 12px 0px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -41,7 +42,7 @@ export const TagContainer = styled.div`
 export const Tag = styled.div`
   padding: 4px 8px;
   display: inline-flex;
-  background-color: ${Color.MonoTag};
+  background-color: ${Color.Mono};
   border-radius: 22px;
 `;
 

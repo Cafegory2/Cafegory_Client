@@ -1,7 +1,7 @@
-import ListComponent from "../../components/list/ListComponent";
+import ListComponent from "../../components/cafestudyLists/ListComponent";
 import { MainLayout } from "../../styles/Layout.styles";
 
-const StudyListPage = () => {
+const CafeStudyListPage = () => {
   return (
     <MainLayout>
       <ListComponent />
@@ -16,4 +16,4 @@ const StudyListPage = () => {
   );
 };
 
-export default StudyListPage;
+export default CafeStudyListPage;

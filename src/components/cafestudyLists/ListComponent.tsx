@@ -1,12 +1,19 @@
 import * as Style from "./ListComponent.styles";
 import { TitleText1, BodyText1, BodyText2, TagText2 } from "../../common/Text";
 import { Color } from "../../constants";
+import { useNavigate } from "react-router-dom";
 
 const ListComponent = () => {
   const statusTagColor = Color.GreenTag;
-  const statusTagText = Color.GreenTagText;
+  const statusTagText = Color.GreenText;
+
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/cafestudy/detail"); // '/s' 경로로 이동합니다.
+  };
   return (
-    <Style.Container>
+    <Style.Container onClick={handleNavigate}>
       <Style.ContainerLeft>
         <Style.TagContainer>
           <Style.Tag style={{ backgroundColor: `${statusTagColor}` }}>
@@ -49,7 +56,7 @@ const ListComponent = () => {
           </Style.InfoDetail>
         </Style.InfoContainer>
         <Style.ViewCount>
-          <BodyText2>조회수: 120</BodyText2>
+          <BodyText2 $color={Color.ViewCount}>조회수: 120</BodyText2>
         </Style.ViewCount>
       </Style.ContainerLeft>
       <Style.ContainerRight>

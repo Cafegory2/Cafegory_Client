@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import useGeoLocation from "../../hooks/useGeoLocation";
 import * as Style from "./Header.styles";
-import AlarmSvg from "../../assets/Alarm.svg"
-import BackSvg from "../../assets/Back.svg"
-import HamburgerSvg from "../../assets/Hamburger.svg"
+import AlarmSvg from "../../assets/Alarm.svg";
+import BackSvg from "../../assets/Back.svg";
+import HamburgerSvg from "../../assets/Hamburger.svg";
+import { HeaderButton } from "../../common/HeaderButton";
+import { Text } from "../../common/Text";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -21,13 +23,13 @@ const Header = () => {
 
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isMenuOpen]);
 
@@ -48,31 +50,49 @@ const Header = () => {
   return (
     <>
       <Style.HeaderLayout>
-        <button onClick={handleBack}>
+        <HeaderButton onClick={handleBack}>
           <img src={BackSvg} alt="뒤로가기 이미지" />
-        </button>
+        </HeaderButton>
         <div>
-          <button>
+          <HeaderButton>
             <img src={AlarmSvg} alt="알람 이미지" />
-          </button>
-          <button onClick={toggleMenu}>
+          </HeaderButton>
+          <HeaderButton onClick={toggleMenu} style={{ marginLeft: "10px" }}>
             <img src={HamburgerSvg} alt="햄버거 이미지" />
-          </button>
+          </HeaderButton>
         </div>
       </Style.HeaderLayout>
 
       {isMenuOpen && (
         <Style.MenuOverlay onClick={closeMenu}>
           <Style.Menu>
-            <Style.MenuItem>메뉴 1</Style.MenuItem>
-            <Style.MenuItem>메뉴 2</Style.MenuItem>
-            <Style.MenuItem>메뉴 3</Style.MenuItem>
-            <Style.MenuItem>메뉴 1</Style.MenuItem>
-            <Style.MenuItem>메뉴 2</Style.MenuItem>
-            <Style.MenuItem>메뉴 3</Style.MenuItem>
-            <Style.MenuItem>메뉴 1</Style.MenuItem>
-            <Style.MenuItem>메뉴 2</Style.MenuItem>
-            <Style.MenuItem>메뉴 3</Style.MenuItem>
+            <Style.MenuItem>
+              <Text>메뉴 1</Text>
+            </Style.MenuItem>
+            <Style.MenuItem>
+              <Text>메뉴 1</Text>
+            </Style.MenuItem>
+            <Style.MenuItem>
+              <Text>메뉴 1</Text>
+            </Style.MenuItem>
+            <Style.MenuItem>
+              <Text>메뉴 1</Text>
+            </Style.MenuItem>
+            <Style.MenuItem>
+              <Text>메뉴 1</Text>
+            </Style.MenuItem>
+            <Style.MenuItem>
+              <Text>메뉴 1</Text>
+            </Style.MenuItem>
+            <Style.MenuItem>
+              <Text>메뉴 1</Text>
+            </Style.MenuItem>
+            <Style.MenuItem>
+              <Text>메뉴 1</Text>
+            </Style.MenuItem>
+            <Style.MenuItem>
+              <Text>메뉴 1</Text>
+            </Style.MenuItem>
           </Style.Menu>
         </Style.MenuOverlay>
       )}
