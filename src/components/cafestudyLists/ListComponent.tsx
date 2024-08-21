@@ -10,7 +10,8 @@ const ListComponent = () => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/cafestudy/detail"); // '/s' 경로로 이동합니다.
+    navigate("/cafestudy/detail");
+    window.scrollTo(0, 0);
   };
   return (
     <Style.Container onClick={handleNavigate}>
