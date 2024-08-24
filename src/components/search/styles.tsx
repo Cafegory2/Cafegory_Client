@@ -26,3 +26,23 @@ export const Container = styled.div`
   align-items: center;
   cursor: text;
 `;
+
+export const ImgContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 23px;
+  height: 100%;
+`;
+
+export const InputContainer = styled.input`
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  width: 100vw;
+  color: black;
+  background-color: transparent;
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.5); // 플레이스홀더 색상 조정
+  }
+`;

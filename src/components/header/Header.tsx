@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useLockBodyScroll from "../../hooks/useLockBodyScroll";
 import useGeoLocation from "../../hooks/useGeoLocation";
 import useHamburgerStore from "../../store/useHamburgerStore";
-import * as Style from "./Header.styles";
+import * as Style from "./styles";
 import AlarmSvg from "../../assets/Alarm.svg";
 import BackSvg from "../../assets/Back.svg";
 import HamburgerSvg from "../../assets/Hamburger.svg";

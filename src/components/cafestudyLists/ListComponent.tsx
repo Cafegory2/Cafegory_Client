@@ -1,4 +1,4 @@
-import * as Style from "./ListComponent.styles";
+import * as Style from "./styles";
 import { TitleText1, BodyText3, BodyText4, TagText2 } from "../../common/Text";
 import { Color } from "../../constants";
 import { useNavigate } from "react-router-dom";

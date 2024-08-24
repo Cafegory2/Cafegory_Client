@@ -2,7 +2,7 @@
 import { ParticipateButton } from "../../common/ParticipateButton";
 import { BodyText3, TitleText1, TitleText2 } from "../../common/Text";
 import { Color } from "../../constants";
-import * as Style from "./DetailComponent.styles";
+import * as Style from "./styles";
 
 const DetailComponent = () => {
   const timeTmp: string = "16:40";
