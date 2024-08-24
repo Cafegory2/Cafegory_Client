@@ -40,47 +40,51 @@ export const OverviewTopSection = styled.div`
 export const OverviewBottom = styled.div`
   width: 100%;
   height: 107px;
+  padding: 0px 12px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
 `;
 
-export const OverviewBottomSection = styled.div`
+export const SectionContainer = styled.div`
+  width: 50%;
+  max-width: 170px;
+  height: 100%;
   display: flex;
-  width: 100%;
-  height: 10%;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const Section = styled.div`
-  width: 47%;
-  height: 100%;
-  padding: 0px 15px;
+  width: 100%;
+  height: 25%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
 `;
 
 export const SectionTitle1 = styled.div`
-  min-width: 45px;
+  width: 45px;
 `;
 
 export const SectionTitle2 = styled.div`
-  min-width: 55px;
+  width: 55px;
 `;
 
 export const SectionDetail = styled.div`
-  width: 85%;
+  width: calc(100% - 45px);
+`;
+
+export const SectionDetail2 = styled.div`
+  width: calc(100% - 55px);
 `;
 
 export const ContainerDetail = styled.div`
   width: 100%;
-  padding: 8px 12px;
+  padding: 8px 12px 20px 12px;
   margin-top: 8px;
   background-color: white;
   border-radius: 10px;
