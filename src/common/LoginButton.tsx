@@ -15,7 +15,7 @@ export const LoginButton = styled.button<{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 90%; //임시
+  width: 90%;
   padding: 8px 0px;
   margin: 8px 0px;
   &:hover {

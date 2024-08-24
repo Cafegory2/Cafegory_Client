@@ -25,11 +25,21 @@ export const TitleText2 = styled(Text)`
 `;
 
 export const BodyText1 = styled(Text)`
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
 `;
 
 export const BodyText2 = styled(Text)`
+  font-size: 14px;
+  font-weight: 400;
+`;
+
+export const BodyText3 = styled(Text)`
+  font-size: 12px;
+  font-weight: 400;
+`;
+
+export const BodyText4 = styled(Text)`
   font-size: 10px;
   font-weight: 400;
 `;

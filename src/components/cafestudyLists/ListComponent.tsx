@@ -1,5 +1,5 @@
 import * as Style from "./ListComponent.styles";
-import { TitleText1, BodyText1, BodyText2, TagText2 } from "../../common/Text";
+import { TitleText1, BodyText3, BodyText4, TagText2 } from "../../common/Text";
 import { Color } from "../../constants";
 import { useNavigate } from "react-router-dom";
 
@@ -33,31 +33,31 @@ const ListComponent = () => {
         <Style.InfoContainer>
           <Style.InfoDetail>
             <Style.InfoDetailTitle>
-              <BodyText1>장소</BodyText1>
+              <BodyText3>장소</BodyText3>
             </Style.InfoDetailTitle>
             <Style.InfoDetailDetail>
-              <BodyText1>스타벅스 역삼역점</BodyText1>
+              <BodyText3>스타벅스 역삼역점</BodyText3>
             </Style.InfoDetailDetail>
           </Style.InfoDetail>
           <Style.InfoDetail>
             <Style.InfoDetailTitle>
-              <BodyText1>시간</BodyText1>
+              <BodyText3>시간</BodyText3>
             </Style.InfoDetailTitle>
             <Style.InfoDetailDetail>
-              <BodyText1>8월 13일 14시 ~ 16시</BodyText1>
+              <BodyText3>8월 13일 14시 ~ 16시</BodyText3>
             </Style.InfoDetailDetail>
           </Style.InfoDetail>
           <Style.InfoDetail>
             <Style.InfoDetailTitle>
-              <BodyText1>작성자</BodyText1>
+              <BodyText3>작성자</BodyText3>
             </Style.InfoDetailTitle>
             <Style.InfoDetailDetail>
-              <BodyText1>수박바</BodyText1>
+              <BodyText3>수박바</BodyText3>
             </Style.InfoDetailDetail>
           </Style.InfoDetail>
         </Style.InfoContainer>
         <Style.ViewCount>
-          <BodyText2 $color={Color.ViewCount}>조회수: 120</BodyText2>
+          <BodyText4 $color={Color.ViewCount}>조회수: 120</BodyText4>
         </Style.ViewCount>
       </Style.ContainerLeft>
       <Style.ContainerRight>

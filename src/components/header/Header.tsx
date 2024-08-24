@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import useLockBodyScroll from "../../hooks/useLockBodyScroll";
 import useGeoLocation from "../../hooks/useGeoLocation";
+import useHamburgerStore from "../../store/useHamburgerStore";
 import * as Style from "./Header.styles";
 import AlarmSvg from "../../assets/Alarm.svg";
 import BackSvg from "../../assets/Back.svg";
 import HamburgerSvg from "../../assets/Hamburger.svg";
 import { HeaderButton } from "../../common/HeaderButton";
-import { Text } from "../../common/Text";
+import { HamburgerOverlay } from "../overlay/hamburger/HamburgerOverlay";
 
 const Header = () => {
   const navigate = useNavigate();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isOpen, toggleMenu } = useHamburgerStore();
   const location = useGeoLocation();
 
   useEffect(() => {
@@ -21,30 +23,14 @@ const Header = () => {
     }
   }, [location]);
 
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isMenuOpen]);
+  useLockBodyScroll(isOpen);
 
   const handleBack = () => {
     navigate(-1);
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (e.target === e.currentTarget) {
-      setIsMenuOpen(false);
-    }
+  const handleToggle = () => {
+    toggleMenu();
   };
 
   return (
@@ -57,45 +43,13 @@ const Header = () => {
           <HeaderButton>
             <img src={AlarmSvg} alt="알람 이미지" />
           </HeaderButton>
-          <HeaderButton onClick={toggleMenu} style={{ marginLeft: "10px" }}>
+          <HeaderButton onClick={handleToggle} style={{ marginLeft: "10px" }}>
             <img src={HamburgerSvg} alt="햄버거 이미지" />
           </HeaderButton>
         </div>
       </Style.HeaderLayout>
 
-      {isMenuOpen && (
-        <Style.MenuOverlay onClick={closeMenu}>
-          <Style.Menu>
-            <Style.MenuItem>
-              <Text>메뉴 1</Text>
-            </Style.MenuItem>
-            <Style.MenuItem>
-              <Text>메뉴 1</Text>
-            </Style.MenuItem>
-            <Style.MenuItem>
-              <Text>메뉴 1</Text>
-            </Style.MenuItem>
-            <Style.MenuItem>
-              <Text>메뉴 1</Text>
-            </Style.MenuItem>
-            <Style.MenuItem>
-              <Text>메뉴 1</Text>
-            </Style.MenuItem>
-            <Style.MenuItem>
-              <Text>메뉴 1</Text>
-            </Style.MenuItem>
-            <Style.MenuItem>
-              <Text>메뉴 1</Text>
-            </Style.MenuItem>
-            <Style.MenuItem>
-              <Text>메뉴 1</Text>
-            </Style.MenuItem>
-            <Style.MenuItem>
-              <Text>메뉴 1</Text>
-            </Style.MenuItem>
-          </Style.Menu>
-        </Style.MenuOverlay>
-      )}
+      {isOpen && <HamburgerOverlay />}
     </>
   );
 };

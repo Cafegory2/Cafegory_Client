@@ -33,6 +33,11 @@ body {
 	line-height: normal;
 	width: 100%;
 	height: 100%;
+	//드래그 불가능하게 설정
+	-webkit-user-select: none; 
+  	-moz-user-select: none;   
+ 	-ms-user-select: none;     
+ 	user-select: none;      
 }
 p{
 	font-family: 'Noto Sans KR', 'Roboto'; 

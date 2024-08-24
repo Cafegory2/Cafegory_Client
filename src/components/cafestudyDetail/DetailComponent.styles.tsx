@@ -11,7 +11,7 @@ export const DetailContainer = styled.div`
   width: 100%;
   min-height: calc(100vh - 200px - min(max(8vh, 60px), 100px));
   padding: 12px 16px;
-  background-color: ${Color.Mono};
+  background-color: ${Color.GreenBackGround};
 `;
 
 export const ContainerOverview = styled.div`

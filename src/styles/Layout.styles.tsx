@@ -19,7 +19,7 @@ export const LoginLayout = styled.div`
 export const MainLayout = styled.div`
   width: 100%;
   padding: 0px 16px;
-  margin-top: min(max(8vh, 60px), 100px);
+  margin-top: calc(min(max(8vh, 60px), 100px) + 110px);
 `;
 
 export const MainLayout2 = styled.div`
