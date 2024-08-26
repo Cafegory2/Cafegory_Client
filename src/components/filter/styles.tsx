@@ -11,4 +11,18 @@ export const Layout = styled.div`
   padding: 8px 16px 0px 16px;
   display: flex;
   background-color: white;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 `;
+
+export const ImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const TextContainer = styled.div``;

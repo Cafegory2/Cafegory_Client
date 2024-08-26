@@ -31,7 +31,8 @@ export const ImgContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 23px;
+  justify-content: center;
+  min-width: 23px;
   height: 100%;
 `;
 
@@ -40,8 +41,13 @@ export const InputContainer = styled.input`
   outline: none;
   padding: 5px 10px;
   width: 100vw;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: 400;
   color: black;
   background-color: transparent;
+
   &::placeholder {
     color: rgba(0, 0, 0, 0.5); // 플레이스홀더 색상 조정
   }

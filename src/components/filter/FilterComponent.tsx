@@ -18,8 +18,12 @@ export const FilterComponent = () => {
     <>
       <Style.Layout>
         <FilterButton onClick={handleToggle}>
-          <img src={DownButton} alt="DownButton" />
-          <TitleText2>필터링 검색</TitleText2>
+          <Style.ImageContainer>
+            <img src={DownButton} alt="DownButton" />
+          </Style.ImageContainer>
+          <Style.TextContainer>
+            <TitleText2>필터링 검색</TitleText2>
+          </Style.TextContainer>
         </FilterButton>
       </Style.Layout>
       {isOpen && <FilterOverlay />}

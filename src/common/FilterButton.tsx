@@ -7,9 +7,10 @@ export const FilterButton = styled.button<{
   background-color: ${(props) =>
     props.$backgroundColor ? props.$backgroundColor : "white"};
   border: ${(props) => (props.$border ? props.$border : "none")};
-  width: 143px;
+  min-width: 143px;
   height: 40px;
   padding: 0 15px;
+  margin-right: 10px;
   border-radius: 38px;
   background-color: white;
   display: flex;

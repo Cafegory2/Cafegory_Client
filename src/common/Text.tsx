@@ -1,13 +1,21 @@
 import styled from "styled-components";
+import { Color } from "../constants";
 
 export const Text = styled.p<{
   $fontSize?: number;
   $fontWeight?: number;
   $color?: string;
+  $disabled?: boolean;
 }>`
   font-size: ${(props) => (props.$fontSize ? props.$fontSize : 14)}px;
   font-weight: ${(props) => (props.$fontWeight ? props.$fontWeight : 400)};
-  color: ${(props) => (props.$color ? props.$color : "black")};
+  color: ${(props) =>
+    props.$disabled
+      ? Color.MonoTagText
+      : props.$color
+      ? props.$color
+      : "black"};
+
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
