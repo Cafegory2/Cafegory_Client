@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { Color } from "../../constants";
+import { Color, HeaderHeight } from "../../constants";
 
 const slideIn = keyframes`
   from { transform: translateY(-100%); }
@@ -17,9 +17,9 @@ export const Overlay1 = styled.div`
   max-width: 430px;
   min-width: 320px;
   top: 0;
-  margin-top: min(max(8vh, 60px), 100px);
+  margin-top: ${HeaderHeight};
   z-index: 2;
-  height: calc(100vh - min(max(8vh, 60px), 100px));
+  height: calc(100vh - ${HeaderHeight});
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: flex-end;

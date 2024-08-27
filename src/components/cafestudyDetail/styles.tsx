@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color } from "../../constants";
+import { Color, HeaderHeight } from "../../constants";
 
 export const ImgContainer = styled.div`
   width: 100%;
@@ -9,7 +9,7 @@ export const ImgContainer = styled.div`
 
 export const DetailContainer = styled.div`
   width: 100%;
-  min-height: calc(100vh - 200px - min(max(8vh, 60px), 100px));
+  min-height: calc(100vh - 200px - ${HeaderHeight});
   padding: 12px 16px;
   background-color: ${Color.GreenBackGround};
 `;

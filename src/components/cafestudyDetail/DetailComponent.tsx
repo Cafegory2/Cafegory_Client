@@ -68,7 +68,7 @@ const DetailComponent = () => {
             <Style.SectionContainer>
               <Style.Section>
                 <Style.SectionTitle2>
-                  <BodyText3 $color={Color.MonoTagText}>대화</BodyText3>
+                  <BodyText3 $color={Color.Black}>대화</BodyText3>
                 </Style.SectionTitle2>
                 <Style.SectionDetail2>
                   <BodyText3>대화 환영!</BodyText3>

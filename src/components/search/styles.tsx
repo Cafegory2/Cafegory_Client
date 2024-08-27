@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color } from "../../constants";
+import { Color, HeaderHeight } from "../../constants";
 
 export const Layout = styled.div`
   position: fixed;
@@ -10,7 +10,7 @@ export const Layout = styled.div`
   min-width: 320px;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: min(max(8vh, 60px), 100px);
+  margin-top: ${HeaderHeight};
   background-color: white;
 `;
 
