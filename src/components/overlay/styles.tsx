@@ -104,17 +104,16 @@ export const ContainerBottom = styled.div`
   overflow: auto;
 `;
 
-export const BottomSection = styled.div`
+export const BottomSection = styled.div<{
+  $isSelected: boolean;
+}>`
   width: 100%;
   height: 47px;
   display: flex;
   align-items: center;
   padding: 0px 16px;
   border-bottom: 1px solid ${Color.Mono};
+  background-color: ${(props) =>
+    props.$isSelected ? Color.DarkerGreenBackGround : "white"};
   cursor: pointer;
-
-  &:hover {
-    background-color: ${Color.DarkerGreenBackGround};
-    transition: 0.2s ease;
-  }
 `;

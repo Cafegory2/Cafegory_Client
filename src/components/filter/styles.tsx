@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Color } from "../../constants";
 
 export const Layout = styled.div`
   position: fixed;
@@ -8,10 +9,12 @@ export const Layout = styled.div`
   min-width: 320px;
   height: 54px;
   margin-top: calc(min(max(8vh, 60px), 100px) + 44px);
-  padding: 8px 16px 0px 16px;
+  padding: 0px 16px 0px 16px;
   display: flex;
   background-color: white;
   overflow: auto;
+  display: flex;
+  align-items: center;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   &::-webkit-scrollbar {
@@ -19,10 +22,9 @@ export const Layout = styled.div`
   }
 `;
 
-export const ImageContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const FilterBar = styled.div`
+  width: 1px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: ${Color.MonoTagText};
 `;
-
-export const TextContainer = styled.div``;

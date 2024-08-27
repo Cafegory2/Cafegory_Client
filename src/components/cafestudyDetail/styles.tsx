@@ -84,7 +84,7 @@ export const SectionDetail2 = styled.div`
 
 export const ContainerDetail = styled.div`
   width: 100%;
-  padding: 8px 12px 20px 12px;
+  padding: 8px 12px 24px 12px;
   margin-top: 8px;
   background-color: white;
   border-radius: 10px;

@@ -2,7 +2,6 @@ import { BodyText1 } from "../../../common/Text";
 import useCafeStudySelectFilterStore from "../../../store/useCafeStudySelctFilterStore";
 import useCafeStudyFilterStore from "../../../store/useCafeStudyFilterStore";
 import * as Style from "../styles";
-import { Color } from "../../../constants";
 
 const CategoryTmp = [
   "개발",
@@ -46,14 +45,8 @@ export const RenderFilterContent = () => {
           {CategoryTmp.map((category) => (
             <Style.BottomSection
               key={category}
-              style={{
-                backgroundColor: categories.includes(category)
-                  ? Color.DarkerGreenBackGround
-                  : "white",
-              }}
-              onClick={() => {
-                handleAddCategory(category);
-              }}
+              $isSelected={categories.includes(category)} // isSelected prop 추가
+              onClick={() => handleAddCategory(category)}
             >
               <BodyText1>{category}</BodyText1>
             </Style.BottomSection>
@@ -66,11 +59,7 @@ export const RenderFilterContent = () => {
           {DateTmp.map((date) => (
             <Style.BottomSection
               key={date}
-              style={{
-                backgroundColor: dates.includes(date)
-                  ? Color.DarkerGreenBackGround
-                  : "white",
-              }}
+              $isSelected={dates.includes(date)}
               onClick={() => {
                 handleAddDate(date);
               }}
@@ -86,11 +75,7 @@ export const RenderFilterContent = () => {
           {CafeTmp.map((cafe) => (
             <Style.BottomSection
               key={cafe}
-              style={{
-                backgroundColor: cafes.includes(cafe)
-                  ? Color.DarkerGreenBackGround
-                  : "white",
-              }}
+              $isSelected={cafes.includes(cafe)}
               onClick={() => {
                 handleAddCafe(cafe);
               }}
