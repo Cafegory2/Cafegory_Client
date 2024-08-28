@@ -7,6 +7,7 @@ import * as Style from "./styles";
 import DownButton from "../../assets/Down.svg";
 import CancelButton from "../../assets/Cancel.svg";
 import { FilterOverlay } from "../overlay/filter/FilterOverlay";
+import { useEffect } from "react";
 
 export const FilterComponent = () => {
   const { isOpen, toggleMenu } = useFilterStore();
@@ -28,7 +29,11 @@ export const FilterComponent = () => {
     toggleMenu();
   };
 
-  //카테고리 쪽은 했지만 날짜랑 카페는 해야 함
+  //최적화 검증
+  useEffect(() => {
+    console.log("필터 오버레이 렌더링");
+  });
+
   return (
     <>
       <Style.Layout>

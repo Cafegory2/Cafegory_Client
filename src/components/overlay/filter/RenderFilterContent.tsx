@@ -2,6 +2,8 @@ import { BodyText1 } from "../../../common/Text";
 import useCafeStudySelectFilterStore from "../../../store/useCafeStudySelctFilterStore";
 import useCafeStudyFilterStore from "../../../store/useCafeStudyFilterStore";
 import * as Style from "../styles";
+import { useEffect } from "react";
+import React from "react";
 
 const CategoryTmp = [
   "개발",
@@ -23,7 +25,7 @@ const DateTmp = [
 
 const CafeTmp = ["카페 시설", "분위기", "기타"];
 
-export const RenderFilterContent = () => {
+const RenderFilterContent = React.memo(() => {
   const { categories, dates, cafes, toggleCategory, toggleDate, toggleCafe } =
     useCafeStudyFilterStore();
   const handleAddCategory = (prop: string) => {
@@ -35,6 +37,11 @@ export const RenderFilterContent = () => {
   const handleAddCafe = (prop: string) => {
     toggleCafe(prop);
   };
+
+  //웹 최적화 검증
+  useEffect(() => {
+    console.log("필터 오버레이 중 리스트 불러오는 곳 렌더링");
+  });
 
   const { selectedCategory } = useCafeStudySelectFilterStore();
 
@@ -88,4 +95,6 @@ export const RenderFilterContent = () => {
     default:
       return null;
   }
-};
+});
+
+export default RenderFilterContent;

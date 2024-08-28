@@ -4,7 +4,7 @@ import useCafeStudySelectFilterStore from "../../../store/useCafeStudySelctFilte
 import { TitleText2 } from "../../../common/Text";
 import { useEffect, useState } from "react";
 import { FilterOption } from "../../../types/cafestudyfilterType";
-import { RenderFilterContent } from "./RenderFilterContent";
+import RenderFilterContent from "./RenderFilterContent";
 
 export const FilterOverlay = () => {
   const { closeMenu } = useFilterStore();
@@ -78,6 +78,11 @@ export const FilterOverlay = () => {
   useEffect(() => {
     setCategory("카테고리");
   }, [setCategory]);
+
+  //웹 최적화 검증
+  useEffect(() => {
+    console.log("필터 오버레이 렌더링");
+  });
 
   return (
     <Style.Overlay2 onClick={closeMenu}>
