@@ -2,7 +2,7 @@
 import { ParticipateButton } from "../../common/ParticipateButton";
 import { BodyText3, TitleText1, TitleText2 } from "../../common/Text";
 import { Color } from "../../constants";
-import * as Style from "./DetailComponent.styles";
+import * as Style from "./styles";
 
 const DetailComponent = () => {
   const timeTmp: string = "16:40";
@@ -35,7 +35,7 @@ const DetailComponent = () => {
             </Style.OverviewTopSection>
           </Style.OverviewTop>
           <Style.OverviewBottom>
-            <Style.OverviewBottomSection>
+            <Style.SectionContainer>
               <Style.Section>
                 <Style.SectionTitle1>
                   <BodyText3 $color={Color.MonoTagText}>장소</BodyText3>
@@ -49,16 +49,6 @@ const DetailComponent = () => {
                 </Style.SectionDetail>
               </Style.Section>
               <Style.Section>
-                <Style.SectionTitle2>
-                  <BodyText3 $color={Color.MonoTagText}>대화</BodyText3>
-                </Style.SectionTitle2>
-                <Style.SectionDetail>
-                  <BodyText3>대화 환영!</BodyText3>
-                </Style.SectionDetail>
-              </Style.Section>
-            </Style.OverviewBottomSection>
-            <Style.OverviewBottomSection>
-              <Style.Section>
                 <Style.SectionTitle1>
                   <BodyText3 $color={Color.MonoTagText}>일시</BodyText3>
                 </Style.SectionTitle1>
@@ -67,16 +57,6 @@ const DetailComponent = () => {
                 </Style.SectionDetail>
               </Style.Section>
               <Style.Section>
-                <Style.SectionTitle2>
-                  <BodyText3 $color={Color.MonoTagText}>모집인원</BodyText3>
-                </Style.SectionTitle2>
-                <Style.SectionDetail>
-                  <BodyText3>(2/4)</BodyText3>
-                </Style.SectionDetail>
-              </Style.Section>
-            </Style.OverviewBottomSection>
-            <Style.OverviewBottomSection>
-              <Style.Section>
                 <Style.SectionTitle1>
                   <BodyText3 $color={Color.MonoTagText}>작성자</BodyText3>
                 </Style.SectionTitle1>
@@ -84,15 +64,33 @@ const DetailComponent = () => {
                   <BodyText3>수박바</BodyText3>
                 </Style.SectionDetail>
               </Style.Section>
+            </Style.SectionContainer>
+            <Style.SectionContainer>
+              <Style.Section>
+                <Style.SectionTitle2>
+                  <BodyText3 $color={Color.Black}>대화</BodyText3>
+                </Style.SectionTitle2>
+                <Style.SectionDetail2>
+                  <BodyText3>대화 환영!</BodyText3>
+                </Style.SectionDetail2>
+              </Style.Section>
+              <Style.Section>
+                <Style.SectionTitle2>
+                  <BodyText3 $color={Color.MonoTagText}>모집인원</BodyText3>
+                </Style.SectionTitle2>
+                <Style.SectionDetail2>
+                  <BodyText3>(2/4)</BodyText3>
+                </Style.SectionDetail2>
+              </Style.Section>
               <Style.Section>
                 <Style.SectionTitle2>
                   <BodyText3 $color={Color.MonoTagText}>카테고리</BodyText3>
                 </Style.SectionTitle2>
-                <Style.SectionDetail>
-                  <BodyText3>디자인</BodyText3>
-                </Style.SectionDetail>
+                <Style.SectionDetail2>
+                  <BodyText3>고객 서비스/리테일</BodyText3>
+                </Style.SectionDetail2>
               </Style.Section>
-            </Style.OverviewBottomSection>
+            </Style.SectionContainer>
           </Style.OverviewBottom>
         </Style.ContainerOverview>
         <Style.ContainerDetail>
@@ -102,7 +100,12 @@ const DetailComponent = () => {
           <Style.DetailBody>
             <BodyText3 style={{ overflow: "visible", whiteSpace: "normal" }}>
               안녕하세요! 어쩌고 저쩌고 카공 설명~ 이렇고 저렇고 하는 카공에
-              대한 설명인데 여기서 이걸 이렇게 하면
+              대한 설명인데 여기서 이걸 이렇게 하면안녕하세요! 어쩌고 저쩌고
+              카공 설명~ 이렇고 저렇고 하는 카공에 대한 설명인데 여기서 이걸
+              이렇게 하면안녕하세요! 어쩌고 저쩌고 카공 설명~ 이렇고 저렇고 하는
+              카공에 대한 설명인데 여ㄴㅇㄴㅇ기서 이걸 이렇게 하면안녕하세요!
+              어쩌고 저쩌고 카공 설명~ 이렇고 저렇고 하는 카공에 대한 설명인데
+              여기서 이걸 이렇게 하면
             </BodyText3>
           </Style.DetailBody>
         </Style.ContainerDetail>
@@ -118,9 +121,15 @@ const DetailComponent = () => {
               대한 설명인데 여기서 이걸 이렇게 하면안녕하세요! 어쩌고 저쩌고
               카공 설명~ 이렇고 저렇고 하는 카공에 대한 설명인데 여기서 이걸
               이렇게 하면안녕하세요! 어쩌고 저쩌고 카공 설명~ 이렇고 저렇고 하는
-              카공에 대한 설명인데 여기서 이걸 이렇게 하면안녕하세요! 어쩌고
-              저쩌고 카공 설명~ 이렇고 저렇고 하는 카공에 대한 설명인데 여기서
-              이걸 이렇게 하면
+              카공에 대한 설명인데 여ㅇㄴㅇㄴㅇ기서 이걸 이렇게 하면안녕하세요!
+              어쩌고 저쩌고 카공 설명~ 이렇고 저렇고 하는 카공에 대한 설명인데
+              여기서 이걸 이렇게 하면 하면안녕하세요! 어쩌고 저쩌고 카공 설명~
+              이렇고 저렇고 하는 카공에 대한 설명인데 여기서 이걸 이렇게
+              하면안녕하세요! 어쩌고 저쩌고 카공 설명~ 이렇고 저렇고 하는 카공에
+              대한 설명인데 여기서 이걸 이렇게 하면안녕하세요! 어쩌고 저쩌고
+              카공 설명~ 이렇고 저렇고 하는 카공에 대한 설명인데 여기서 이걸
+              이렇게 하면안녕하세요! 어쩌고 저쩌고 카공 설명~ 이렇고 저렇고 하는
+              카공에 대한 설명인데 여기서 이걸 이렇게 하면
             </BodyText3>
           </Style.DetailBody>
         </Style.ContainerDetail>

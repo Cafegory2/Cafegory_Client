@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { Color } from "../../constants";
+import { Color, HeaderHeight } from "../../constants";
 
 const slideIn = keyframes`
   from { transform: translateY(-100%); }
@@ -17,9 +17,9 @@ export const Overlay1 = styled.div`
   max-width: 430px;
   min-width: 320px;
   top: 0;
-  margin-top: min(max(8vh, 60px), 100px);
+  margin-top: ${HeaderHeight};
   z-index: 2;
-  height: calc(100vh - min(max(8vh, 60px), 100px));
+  height: calc(100vh - ${HeaderHeight});
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: flex-end;
@@ -104,17 +104,16 @@ export const ContainerBottom = styled.div`
   overflow: auto;
 `;
 
-export const BottomSection = styled.div`
+export const BottomSection = styled.div<{
+  $isSelected: boolean;
+}>`
   width: 100%;
   height: 47px;
   display: flex;
   align-items: center;
   padding: 0px 16px;
   border-bottom: 1px solid ${Color.Mono};
+  background-color: ${(props) =>
+    props.$isSelected ? Color.DarkerGreenBackGround : "white"};
   cursor: pointer;
-
-  &:hover {
-    background-color: ${Color.DarkerGreenBackGround};
-    transition: 0.2s ease;
-  }
 `;

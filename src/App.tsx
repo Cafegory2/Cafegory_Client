@@ -8,6 +8,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RedirectPage from "./pages/RedirectPage/RedirectPage";
 import CafeStudyListPage from "./pages/CafeStudyPage/CafeStudyListPage";
 import CafeStudyDetailPage from "./pages/CafeStudyPage/CafeStudyDetailPage";
+import { CafeStudySearchPage } from "./pages/CafeStudyPage/CafeStudySearchPage";
 import "./styles/fonts.css";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,10 @@ function App() {
                 <Route
                   path="/cafestudy/detail"
                   element={<CafeStudyDetailPage />}
+                ></Route>
+                <Route
+                  path="/cafestudy/lists/search"
+                  element={<CafeStudySearchPage />}
                 ></Route>
               </Route>
             </Routes>

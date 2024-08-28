@@ -13,3 +13,5 @@ export const Color = {
   GreenBackGround: "rgba(26, 229, 101, 0.10)",
   DarkerGreenBackGround: "rgba(26, 229, 101, 0.20)",
 } as const;
+
+export const HeaderHeight = `min(max(8vh, 60px), 100px)` as const;

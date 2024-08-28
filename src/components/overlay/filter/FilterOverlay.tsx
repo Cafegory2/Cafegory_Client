@@ -1,13 +1,17 @@
 import * as Style from "../styles";
 import useFilterStore from "../../../store/useFilterStore";
-import { BodyText1, TitleText2 } from "../../../common/Text";
-import { useState } from "react";
+import useCafeStudySelectFilterStore from "../../../store/useCafeStudySelctFilterStore";
+import { TitleText2 } from "../../../common/Text";
+import { useEffect, useState } from "react";
+import { FilterOption } from "../../../types/cafestudyfilterType";
+import RenderFilterContent from "./RenderFilterContent";
 
 export const FilterOverlay = () => {
   const { closeMenu } = useFilterStore();
   const [startY, setStartY] = useState(0);
   const [moveY, setMoveY] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const { selectedCategory, setCategory } = useCafeStudySelectFilterStore();
 
   const handleMenuClick = (event: React.MouseEvent<HTMLDivElement>) => {
     event.stopPropagation();
@@ -61,6 +65,25 @@ export const FilterOverlay = () => {
     }
   };
 
+  const handleClickFilter = (props: FilterOption) => {
+    setCategory(props);
+  };
+
+  const Filters = ["카테고리", "날짜", "카페"] as const;
+
+  useEffect(() => {
+    document.getElementById("filter")!.scrollTo(0, 0);
+  }, [selectedCategory]);
+
+  useEffect(() => {
+    setCategory("카테고리");
+  }, [setCategory]);
+
+  //웹 최적화 검증
+  useEffect(() => {
+    console.log("필터 오버레이 렌더링");
+  });
+
   return (
     <Style.Overlay2 onClick={closeMenu}>
       <Style.FilterContainer
@@ -76,54 +99,18 @@ export const FilterOverlay = () => {
           onMouseUp={handleMouseUp}
         >
           <Style.ContainerSlider />
-          <Style.TopSection>
-            <TitleText2>카테고리</TitleText2>
-          </Style.TopSection>
-          <Style.TopSection>
-            <TitleText2>날짜</TitleText2>
-          </Style.TopSection>
-          <Style.TopSection>
-            <TitleText2>카페</TitleText2>
-          </Style.TopSection>
+          {Filters.map((filter) => (
+            <Style.TopSection
+              key={filter}
+              onClick={() => handleClickFilter(filter)}
+            >
+              <TitleText2 $disabled={filter !== selectedCategory}>
+                {filter}
+              </TitleText2>
+            </Style.TopSection>
+          ))}
         </Style.ContainerTop>
-        <Style.ContainerBottom>
-          <Style.BottomSection>
-            <BodyText1>개발</BodyText1>
-          </Style.BottomSection>
-          <Style.BottomSection>
-            <BodyText1>개발</BodyText1>
-          </Style.BottomSection>
-          <Style.BottomSection>
-            <BodyText1>개발</BodyText1>
-          </Style.BottomSection>
-          <Style.BottomSection>
-            <BodyText1>개발</BodyText1>
-          </Style.BottomSection>
-          <Style.BottomSection>
-            <BodyText1>개발</BodyText1>
-          </Style.BottomSection>
-          <Style.BottomSection>
-            <BodyText1>개발</BodyText1>
-          </Style.BottomSection>
-          <Style.BottomSection>
-            <BodyText1>개발</BodyText1>
-          </Style.BottomSection>
-          <Style.BottomSection>
-            <BodyText1>개발</BodyText1>
-          </Style.BottomSection>
-          <Style.BottomSection>
-            <BodyText1>개발</BodyText1>
-          </Style.BottomSection>
-          <Style.BottomSection>
-            <BodyText1>개발</BodyText1>
-          </Style.BottomSection>
-          <Style.BottomSection>
-            <BodyText1>개발</BodyText1>
-          </Style.BottomSection>
-          <Style.BottomSection>
-            <BodyText1>개발</BodyText1>
-          </Style.BottomSection>
-        </Style.ContainerBottom>
+        <RenderFilterContent />
       </Style.FilterContainer>
     </Style.Overlay2>
   );
