@@ -1,9 +1,9 @@
 import { BodyText1 } from "../../../common/Text";
-import useCafeStudySelectFilterStore from "../../../store/useCafeStudySelctFilterStore";
 import useCafeStudyFilterStore from "../../../store/useCafeStudyFilterStore";
 import * as Style from "../styles";
 import { useEffect } from "react";
 import React from "react";
+import { FilterOption } from "../../../types/cafestudyfilterType";
 
 const CategoryTmp = [
   "개발",
@@ -25,7 +25,11 @@ const DateTmp = [
 
 const CafeTmp = ["카페 시설", "분위기", "기타"];
 
-const RenderFilterContent = React.memo(() => {
+interface PropType {
+  selectedCategory: FilterOption;
+}
+
+const RenderFilterContent = React.memo<PropType>(({ selectedCategory }) => {
   const { categories, dates, cafes, toggleCategory, toggleDate, toggleCafe } =
     useCafeStudyFilterStore();
   const handleAddCategory = (prop: string) => {
@@ -40,10 +44,8 @@ const RenderFilterContent = React.memo(() => {
 
   //웹 최적화 검증
   useEffect(() => {
-    console.log("필터 오버레이 중 리스트 불러오는 곳 렌더링");
+    console.log("하단 필터 오버레이 렌더링");
   });
-
-  const { selectedCategory } = useCafeStudySelectFilterStore();
 
   switch (selectedCategory) {
     case "카테고리":

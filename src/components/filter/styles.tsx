@@ -28,3 +28,17 @@ export const FilterBar = styled.div`
   margin-right: 10px;
   background-color: ${Color.MonoTagText};
 `;
+
+export const FilterImgContainer = styled.div`
+  width: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+`;
+
+export const FilterTextContainer = styled.div`
+  width: 80px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+`;

@@ -27,4 +27,5 @@ export const MainLayout = styled.div`
 export const MainLayout2 = styled.div`
   width: 100%;
   margin-top: ${HeaderHeight};
+  background-color: white;
 `;
