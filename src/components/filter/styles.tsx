@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, HeaderHeight } from "../../constants";
+import { HeaderHeight } from "../../constants";
 
 export const Layout = styled.div`
   position: fixed;
@@ -26,7 +26,7 @@ export const FilterBar = styled.div`
   width: 1px;
   height: 40px;
   margin-right: 10px;
-  background-color: ${Color.MonoTagText};
+  background-color: ${(props) => props.theme.colors.MonoTagText};
 `;
 
 export const FilterImgContainer = styled.div`

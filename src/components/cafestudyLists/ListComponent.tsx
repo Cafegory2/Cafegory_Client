@@ -1,12 +1,15 @@
 import * as Style from "./styles";
-import { TitleText1, BodyText3, BodyText4, TagText2 } from "../../common/Text";
-import { Color } from "../../constants";
+import {
+  TitleText1,
+  BodyText3,
+  TagText2,
+  GreenTagText2,
+  MonoTagText2,
+  MonoBodyText4,
+} from "../../common/Text";
 import { useNavigate } from "react-router-dom";
 
 const ListComponent = () => {
-  const statusTagColor = Color.GreenTag;
-  const statusTagText = Color.GreenText;
-
   const navigate = useNavigate();
 
   const handleNavigate = () => {
@@ -17,14 +20,14 @@ const ListComponent = () => {
     <Style.Container onClick={handleNavigate}>
       <Style.ContainerLeft>
         <Style.TagContainer>
-          <Style.Tag style={{ backgroundColor: `${statusTagColor}` }}>
-            <TagText2 $color={statusTagText}>#모집중</TagText2>
+          <Style.GreenTag>
+            <GreenTagText2>#모집중</GreenTagText2>
+          </Style.GreenTag>
+          <Style.Tag>
+            <MonoTagText2>#디자인</MonoTagText2>
           </Style.Tag>
           <Style.Tag>
-            <TagText2 $color={Color.MonoTagText}>#디자인</TagText2>
-          </Style.Tag>
-          <Style.Tag>
-            <TagText2 $color={Color.MonoTagText}>#대화환영!</TagText2>
+            <MonoTagText2>#대화환영</MonoTagText2>
           </Style.Tag>
         </Style.TagContainer>
         <Style.TitleContainer>
@@ -57,7 +60,7 @@ const ListComponent = () => {
           </Style.InfoDetail>
         </Style.InfoContainer>
         <Style.ViewCount>
-          <BodyText4 $color={Color.ViewCount}>조회수: 120</BodyText4>
+          <MonoBodyText4>조회수: 120</MonoBodyText4>
         </Style.ViewCount>
       </Style.ContainerLeft>
       <Style.ContainerRight>

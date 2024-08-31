@@ -26,3 +26,7 @@ export const LoginButton = styled.button<{
     outline: none;
   }
 `;
+
+export const KakaoLoginButton = styled(LoginButton)`
+  background-color: ${(props) => props.theme.colors.Kakao};
+`;

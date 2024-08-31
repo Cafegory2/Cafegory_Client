@@ -1,7 +1,10 @@
-// import { Text } from "../../common/Text";
 import { ParticipateButton } from "../../common/ParticipateButton";
-import { BodyText3, TitleText1, TitleText2 } from "../../common/Text";
-import { Color } from "../../constants";
+import {
+  BodyText3,
+  GreenTitleText2,
+  MonoBodyText3,
+  TitleText1,
+} from "../../common/Text";
 import * as Style from "./styles";
 
 const DetailComponent = () => {
@@ -26,19 +29,15 @@ const DetailComponent = () => {
               <TitleText1>스타벅스 카공 모집</TitleText1>
             </Style.OverviewTopSection>
             <Style.OverviewTopSection>
-              <BodyText3 $color={Color.MonoTagText}>
-                작성 일시 | {timeTmp}
-              </BodyText3>
-              <BodyText3 $color={Color.MonoTagText}>
-                조회수 | {viewTmp}
-              </BodyText3>
+              <MonoBodyText3>작성 일시 | {timeTmp}</MonoBodyText3>
+              <MonoBodyText3>조회수 | {viewTmp}</MonoBodyText3>
             </Style.OverviewTopSection>
           </Style.OverviewTop>
           <Style.OverviewBottom>
             <Style.SectionContainer>
               <Style.Section>
                 <Style.SectionTitle1>
-                  <BodyText3 $color={Color.MonoTagText}>장소</BodyText3>
+                  <MonoBodyText3>장소</MonoBodyText3>
                 </Style.SectionTitle1>
                 <Style.SectionDetail>
                   <BodyText3 style={{ textDecoration: "underline" }}>
@@ -50,7 +49,7 @@ const DetailComponent = () => {
               </Style.Section>
               <Style.Section>
                 <Style.SectionTitle1>
-                  <BodyText3 $color={Color.MonoTagText}>일시</BodyText3>
+                  <MonoBodyText3>일시</MonoBodyText3>
                 </Style.SectionTitle1>
                 <Style.SectionDetail>
                   <BodyText3>8월 13일 14시 ~ 16시</BodyText3>
@@ -58,7 +57,7 @@ const DetailComponent = () => {
               </Style.Section>
               <Style.Section>
                 <Style.SectionTitle1>
-                  <BodyText3 $color={Color.MonoTagText}>작성자</BodyText3>
+                  <MonoBodyText3>작성자</MonoBodyText3>
                 </Style.SectionTitle1>
                 <Style.SectionDetail>
                   <BodyText3>수박바</BodyText3>
@@ -68,7 +67,7 @@ const DetailComponent = () => {
             <Style.SectionContainer>
               <Style.Section>
                 <Style.SectionTitle2>
-                  <BodyText3 $color={Color.Black}>대화</BodyText3>
+                  <MonoBodyText3>대화</MonoBodyText3>
                 </Style.SectionTitle2>
                 <Style.SectionDetail2>
                   <BodyText3>대화 환영!</BodyText3>
@@ -76,7 +75,7 @@ const DetailComponent = () => {
               </Style.Section>
               <Style.Section>
                 <Style.SectionTitle2>
-                  <BodyText3 $color={Color.MonoTagText}>모집인원</BodyText3>
+                  <MonoBodyText3>모집인원</MonoBodyText3>
                 </Style.SectionTitle2>
                 <Style.SectionDetail2>
                   <BodyText3>(2/4)</BodyText3>
@@ -84,7 +83,7 @@ const DetailComponent = () => {
               </Style.Section>
               <Style.Section>
                 <Style.SectionTitle2>
-                  <BodyText3 $color={Color.MonoTagText}>카테고리</BodyText3>
+                  <MonoBodyText3>카테고리</MonoBodyText3>
                 </Style.SectionTitle2>
                 <Style.SectionDetail2>
                   <BodyText3>고객 서비스/리테일</BodyText3>
@@ -95,7 +94,7 @@ const DetailComponent = () => {
         </Style.ContainerOverview>
         <Style.ContainerDetail>
           <Style.DetailTitle>
-            <TitleText2 $color={Color.GreenText}>카공 소개</TitleText2>
+            <GreenTitleText2>카공 소개</GreenTitleText2>
           </Style.DetailTitle>
           <Style.DetailBody>
             <BodyText3 style={{ overflow: "visible", whiteSpace: "normal" }}>
@@ -111,7 +110,7 @@ const DetailComponent = () => {
         </Style.ContainerDetail>
         <Style.ContainerDetail style={{ marginBottom: "90px" }}>
           <Style.DetailTitle>
-            <TitleText2 $color={Color.GreenText}>Q&A</TitleText2>
+            <GreenTitleText2>Q&A</GreenTitleText2>
           </Style.DetailTitle>
           <Style.DetailBody>
             <BodyText3 style={{ overflow: "visible", whiteSpace: "normal" }}>
