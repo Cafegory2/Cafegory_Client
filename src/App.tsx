@@ -10,6 +10,9 @@ import CafeStudyListPage from "./pages/CafeStudyPage/CafeStudyListPage";
 import CafeStudyDetailPage from "./pages/CafeStudyPage/CafeStudyDetailPage";
 import { CafeStudySearchPage } from "./pages/CafeStudyPage/CafeStudySearchPage";
 import "./styles/fonts.css";
+import CafeStudyCreateListPage from "./pages/CafeStudyPage/CafeStudyCreateListPage";
+import CreateAddComponents from "./components/cafestudyCreate/CreateAddComponents";
+import CafeStudyCreateEditPage from "./pages/CafeStudyPage/CafeStudyCreateEditPage";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +39,14 @@ function App() {
                 <Route
                   path="/cafestudy/lists/search"
                   element={<CafeStudySearchPage />}
+                ></Route>
+                <Route
+                  path="/cafestudy/create"
+                  element={<CafeStudyCreateListPage />}
+                ></Route>
+                <Route
+                  path="/cafestudy/create/edit"
+                  element={<CafeStudyCreateEditPage />}
                 ></Route>
               </Route>
             </Routes>

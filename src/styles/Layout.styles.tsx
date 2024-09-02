@@ -27,4 +27,12 @@ export const MainLayout = styled.div`
 export const MainLayout2 = styled.div`
   width: 100%;
   margin-top: ${HeaderHeight};
+  padding: ${(props) => props.$padding || '0px' }
 `;
+
+export const NoResultLayout = styled.div`
+  min-height: calc(100vh - 130px);
+  display:flex; 
+  align-items: center;
+  justify-content: center;
+`

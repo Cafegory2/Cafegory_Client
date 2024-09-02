@@ -6,6 +6,7 @@ export const Text = styled.p<{
   $fontWeight?: number;
   $color?: string;
   $disabled?: boolean;
+  $margin?: string;
 }>`
   font-size: ${(props) => (props.$fontSize ? props.$fontSize : 14)}px;
   font-weight: ${(props) => (props.$fontWeight ? props.$fontWeight : 400)};
@@ -20,6 +21,7 @@ export const Text = styled.p<{
   white-space: nowrap;
   text-overflow: ellipsis;
   width: auto;
+  margin: ${(props) => (props.$margin && props.$margin)};
 `;
 
 export const TitleText1 = styled(Text)`
