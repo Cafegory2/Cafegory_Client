@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CreateInfo from "../../components/cafestudyCreate/CreateInfo";
 import CreateIntro from "../../components/cafestudyCreate/CreateIntro";
-import { Button, CenterFlex, FixedBottomButton } from "../../components/cafestudyCreate/styles";
+import * as Style from "../../components/cafestudyCreate/styles";
 import { Color } from "../../constants";
 import { MainLayout2 } from "../../styles/Layout.styles";
 
@@ -22,37 +22,41 @@ const CreateAddComponents = () => {
       {view === 'info' ? 
         <>
           <CreateInfo />
-          <CenterFlex>
-            <FixedBottomButton 
+          <Style.FixedBottom> 
+            <Style.CenterFlex>
+              <Style.Button
               onClick={() => handleView('intro', 2)}
-              $fontSize={'22'} 
-              $fontWeight={'700'}
+              $fontSize={22} 
+              $fontWeight={700}
               $color={'#2a2a2a'}
               $backGround={Color.GreenText}
-            >
+              >
               다음으로({currentPage}/2)
-            </FixedBottomButton>
-          </CenterFlex>
+              </Style.Button>
+            </Style.CenterFlex>
+          </Style.FixedBottom>
         </>
         : 
         <>
           <CreateIntro />
-          <CenterFlex>
-           <Button 
-            $fontSize={'22'} 
-            $fontWeight={'700'}
-            $color={'#2a2a2a'}
-            onClick={() => handleView('info', 1)}
-            $backGround={Color.GreenText}
-           >이전으로</Button>
-           <Button 
-            $fontSize={'22'} 
-            $fontWeight={'700'}
-            $color={'#2a2a2a'}
-            onClick={handleSave}
-            $backGround={Color.GreenText}
-           >작성완료({currentPage}/2)</Button>
-          </CenterFlex>
+          <Style.FixedBottom> 
+            <Style.CenterFlex $gap={10}>
+              <Style.Button 
+                $fontSize={22} 
+                $fontWeight={700}
+                $color={'#939393'}
+                onClick={() => handleView('info', 1)}
+                $backGround={'rgba(0,0,0,.1)'}
+              >이전으로</Style.Button>
+              <Style.Button 
+                $fontSize={22} 
+                $fontWeight={700}
+                $color={'#2a2a2a'}
+                onClick={handleSave}
+                $backGround={Color.GreenText}
+              >작성완료({currentPage}/2)</Style.Button>
+            </Style.CenterFlex>
+          </Style.FixedBottom>
         </>
       }
 

@@ -24,7 +24,9 @@ export const MainLayout = styled.div`
   background-color: white;
 `;
 
-export const MainLayout2 = styled.div`
+export const MainLayout2 = styled.div<{
+  $padding?: string;
+}>`
   width: 100%;
   margin-top: ${HeaderHeight};
   padding: ${(props) => props.$padding || '0px' }

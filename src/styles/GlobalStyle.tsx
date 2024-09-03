@@ -19,6 +19,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	vertical-align: baseline;
 	box-sizing: border-box;
+	font-family: 'Noto Sans KR', 'Roboto'; 
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -64,6 +65,7 @@ table {
 #root{
 	width: 100%;
 	height: 100%;
+	// background: #eee;
 }
 `;
 
