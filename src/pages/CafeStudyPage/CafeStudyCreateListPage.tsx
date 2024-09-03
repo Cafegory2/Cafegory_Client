@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Text, TitleText2 } from "../../common/Text";
-import { FixedBottomButton } from "../../components/cafestudyCreate/styles";
+import { Button, FixedBottomButton } from "../../components/cafestudyCreate/styles";
 import ListComponent from "../../components/cafestudyLists/ListComponent";
 import { Color } from "../../constants";
 import { MainLayout2, NoResultLayout } from "../../styles/Layout.styles";
@@ -54,7 +54,7 @@ const CafeStudyCreateListPage = () => {
           </>
         }
         <FixedBottomButton onClick={handleNavigate}
-          $fontSize={'22'} $fontWeight={'700'}>
+          $fontSize={'22'} $fontWeight={'700'} backGround={Color.GreenText}>
           카공 모집하기
         </FixedBottomButton>
       </MainLayout2>
