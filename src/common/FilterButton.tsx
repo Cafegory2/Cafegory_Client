@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Color } from "../constants";
 
 export const FilterButton = styled.button<{
   $backgroundColor?: string;
@@ -13,11 +12,11 @@ export const FilterButton = styled.button<{
   padding: 0 15px;
   margin-right: 10px;
   border-radius: 38px;
-  background-color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  background-color: white;
   border: 1px solid var(--black-4, #454545);
   &:hover {
     transition: 0.2s ease;
@@ -36,7 +35,7 @@ export const FilteredButton = styled.button<{
   background-color: ${(props) =>
     props.$backgroundColor
       ? props.$backgroundColor
-      : Color.DarkerGreenBackGround};
+      : props.theme.colors.DarkerGreenBackGround};
   border: ${(props) => (props.$border ? props.$border : "none")};
   border: 1px solid var(--black-4, #454545);
   padding: 0 15px;

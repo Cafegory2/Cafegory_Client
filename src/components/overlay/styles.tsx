@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { Color, HeaderHeight } from "../../constants";
+import { HeaderHeight } from "../../constants";
 
 const slideIn = keyframes`
   from { transform: translateY(-100%); }
@@ -73,7 +73,7 @@ export const ContainerTop = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid ${Color.MonoTagText};
+  border-bottom: 1px solid ${(props) => props.theme.colors.MonoTagText};
 `;
 
 export const ContainerSlider = styled.div`
@@ -84,7 +84,7 @@ export const ContainerSlider = styled.div`
   width: 25%;
   height: 6px;
   border-radius: 8px;
-  background-color: ${Color.Mono};
+  background-color: ${(props) => props.theme.colors.Mono};
 `;
 
 export const TopSection = styled.div`
@@ -112,8 +112,8 @@ export const BottomSection = styled.div<{
   display: flex;
   align-items: center;
   padding: 0px 16px;
-  border-bottom: 1px solid ${Color.Mono};
+  border-bottom: 1px solid ${(props) => props.theme.colors.Mono};
   background-color: ${(props) =>
-    props.$isSelected ? Color.DarkerGreenBackGround : "white"};
+    props.$isSelected ? props.theme.colors.DarkerGreenBackGround : "white"};
   cursor: pointer;
 `;

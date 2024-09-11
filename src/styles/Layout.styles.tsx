@@ -29,7 +29,8 @@ export const MainLayout2 = styled.div<{
 }>`
   width: 100%;
   margin-top: ${HeaderHeight};
-  padding: ${(props) => props.$padding || '0px' }
+  padding: ${(props) => props.$padding || '0px' };
+  background-color: white;
 `;
 
 export const NoResultLayout = styled.div`

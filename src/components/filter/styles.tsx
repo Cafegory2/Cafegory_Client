@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, HeaderHeight } from "../../constants";
+import { HeaderHeight } from "../../constants";
 
 export const Layout = styled.div`
   position: fixed;
@@ -26,5 +26,19 @@ export const FilterBar = styled.div`
   width: 1px;
   height: 40px;
   margin-right: 10px;
-  background-color: ${Color.MonoTagText};
+  background-color: ${(props) => props.theme.colors.MonoTagText};
+`;
+
+export const FilterImgContainer = styled.div`
+  width: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+`;
+
+export const FilterTextContainer = styled.div`
+  width: 80px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 `;

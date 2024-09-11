@@ -6,7 +6,7 @@ import useCafeStudyFilterStore from "../../store/useCafeStudyFilterStore";
 import * as Style from "./styles";
 import DownButton from "../../assets/Down.svg";
 import CancelButton from "../../assets/Cancel.svg";
-import { FilterOverlay } from "../overlay/filter/FilterOverlay";
+import FilterOverlay from "../overlay/filter/FilterOverlay";
 import { useEffect } from "react";
 
 export const FilterComponent = () => {
@@ -31,16 +31,19 @@ export const FilterComponent = () => {
 
   //최적화 검증
   useEffect(() => {
-    console.log("필터 오버레이 렌더링");
+    console.log("전체 필터 오버레이 렌더링");
   });
 
   return (
     <>
       <Style.Layout>
         <FilterButton onClick={handleToggle}>
-          <img src={DownButton} alt="필터 버튼" />
-
-          <TitleText2>필터링 검색</TitleText2>
+          <Style.FilterImgContainer>
+            <img src={DownButton} alt="필터 버튼" />
+          </Style.FilterImgContainer>
+          <Style.FilterTextContainer>
+            <TitleText2>필터링 검색</TitleText2>
+          </Style.FilterTextContainer>
         </FilterButton>
         {categories.length > 0 || dates.length > 0 || cafes.length > 0 ? (
           <Style.FilterBar>|</Style.FilterBar>
