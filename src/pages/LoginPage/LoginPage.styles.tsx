@@ -1,6 +1,5 @@
 //로그인 페이지 스타일 여기서 처리
 import styled from "styled-components";
-import { Color } from "../../constants";
 
 export const SectionTop = styled.section`
   width: 100%;
@@ -22,5 +21,5 @@ export const Bar = styled.div`
   width: 169px;
   height: 1px;
   margin: 5px 0px 16px 0px;
-  background-color: ${Color.Gray};
+  background-color: ${(props) => props.theme.colors.MonoTagText};
 `;

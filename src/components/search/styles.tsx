@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, HeaderHeight } from "../../constants";
+import { HeaderHeight } from "../../constants";
 
 export const Layout = styled.div`
   position: fixed;
@@ -20,7 +20,7 @@ export const Container = styled.div`
   margin: auto;
   padding: 0px 10px;
   border-radius: 44px;
-  background-color: ${Color.Mono};
+  background-color: ${(props) => props.theme.colors.Mono};
   display: flex;
   flex-direction: row;
   align-items: center;

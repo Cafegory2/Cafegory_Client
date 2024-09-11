@@ -1,6 +1,5 @@
-import { LoginButton } from "../../common/LoginButton";
+import { KakaoLoginButton } from "../../common/LoginButton";
 import { Text } from "../../common/Text";
-import { Color } from "../../constants";
 import KakaoLogo from "../../assets/Kakao.svg";
 
 const KakaoLogin = () => {
@@ -13,7 +12,7 @@ const KakaoLogin = () => {
   };
 
   return (
-    <LoginButton $backgroundColor={Color.Kakao} onClick={loginHandler}>
+    <KakaoLoginButton onClick={loginHandler}>
       <img
         src={KakaoLogo}
         alt="KakoLogo"
@@ -22,7 +21,7 @@ const KakaoLogin = () => {
       <Text $fontSize={16} $fontWeight={400}>
         KAKAO로 로그인
       </Text>
-    </LoginButton>
+    </KakaoLoginButton>
   );
 };
 

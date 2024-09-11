@@ -5,8 +5,9 @@ import { TitleText2 } from "../../../common/Text";
 import { useEffect, useState } from "react";
 import { FilterOption } from "../../../types/cafestudyfilterType";
 import RenderFilterContent from "./RenderFilterContent";
+import React from "react";
 
-export const FilterOverlay = () => {
+const FilterOverlay = React.memo(() => {
   const { closeMenu } = useFilterStore();
   const [startY, setStartY] = useState(0);
   const [moveY, setMoveY] = useState(0);
@@ -20,6 +21,7 @@ export const FilterOverlay = () => {
   const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
     setStartY(event.clientY);
     setIsDragging(true);
+    console.log("클릭");
   };
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -36,6 +38,7 @@ export const FilterOverlay = () => {
   };
 
   const handleMouseUp = () => {
+    console.log("클릭2");
     setIsDragging(false);
     setMoveY(0);
   };
@@ -67,6 +70,7 @@ export const FilterOverlay = () => {
 
   const handleClickFilter = (props: FilterOption) => {
     setCategory(props);
+    console.log("클릭3");
   };
 
   const Filters = ["카테고리", "날짜", "카페"] as const;
@@ -75,13 +79,16 @@ export const FilterOverlay = () => {
     document.getElementById("filter")!.scrollTo(0, 0);
   }, [selectedCategory]);
 
+  //오직 한번, 상단이 처음 마운트 되었을 때만 실행해야 하는 로직이라서 의존성 배열에 setCategory만 있습니다. 문제 없는 코드입니다.
   useEffect(() => {
-    setCategory("카테고리");
+    if (selectedCategory !== "카테고리") {
+      setCategory("카테고리");
+    }
   }, [setCategory]);
 
   //웹 최적화 검증
   useEffect(() => {
-    console.log("필터 오버레이 렌더링");
+    console.log("상단 필터 오버레이 렌더링");
   });
 
   return (
@@ -110,8 +117,10 @@ export const FilterOverlay = () => {
             </Style.TopSection>
           ))}
         </Style.ContainerTop>
-        <RenderFilterContent />
+        <RenderFilterContent selectedCategory={selectedCategory} />
       </Style.FilterContainer>
     </Style.Overlay2>
   );
-};
+});
+
+export default FilterOverlay;

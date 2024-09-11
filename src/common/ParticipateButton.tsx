@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import { Color } from "../constants";
 
 export const ParticipateButton = styled.button<{
   $backgroundColor?: string;
   $border?: string;
 }>`
   background-color: ${(props) =>
-    props.$backgroundColor ? props.$backgroundColor : Color.GreenText};
+    props.$backgroundColor
+      ? props.$backgroundColor
+      : props.theme.colors.GreenText};
   border: ${(props) => (props.$border ? props.$border : "none")};
   padding: 10px 32px;
   position: fixed;
