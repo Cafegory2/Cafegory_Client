@@ -12,8 +12,6 @@ export const ProfileBottom = () => {
       <ListComponent />
       <ListComponent />
       <ListComponent />
-      <ListComponent />
-      <ListComponent />
     </Style.BottomContainer>
   );
 };
