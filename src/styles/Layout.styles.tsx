@@ -24,6 +24,11 @@ export const MainLayout = styled.div`
   background-color: white;
 `;
 
-export const MainLayout2 = styled(MainLayout)`
+export const DetailPageLayout = styled(MainLayout)`
+  margin-top: ${HeaderHeight};
+  padding: 0px;
+`;
+
+export const ProfileLayout = styled(MainLayout)`
   margin-top: ${HeaderHeight};
 `;

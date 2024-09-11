@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SectionTop = styled.div`
+export const Section = styled.div`
   width: 100%;
   height: auto;
   display: flex;
@@ -63,6 +63,7 @@ export const BottomContainer = styled.div`
 export const BottomTitle = styled.div`
   width: 100%;
   height: 25px;
+  margin-bottom: 8px;
 `;
 
 export const BottomDetail1 = styled.div`
@@ -70,13 +71,11 @@ export const BottomDetail1 = styled.div`
   border-radius: 10px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
   padding: 12px;
-  margin-top: 7px;
   margin-bottom: 24px;
 `;
 
 export const BottomDetail2 = styled.div`
   width: 100%;
-  margin-top: 7px;
   margin-bottom: 24px;
   display: flex;
   flex-direction: row;

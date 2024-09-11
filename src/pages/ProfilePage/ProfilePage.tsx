@@ -1,13 +1,14 @@
 import { BodyText3, GreenTitleText2, TitleText2 } from "../../common/Text";
-import { MainLayout2 } from "../../styles/Layout.styles";
+import { ProfileLayout } from "../../styles/Layout.styles";
 import Avatar from "../../assets/avatar.jpeg";
 import * as Style from "./styles";
 import { FilteredButton } from "../../common/FilterButton";
+import ListComponent from "../../components/cafestudyLists/ListComponent";
 
 const RedirectPage = () => {
   return (
-    <MainLayout2>
-      <Style.SectionTop>
+    <ProfileLayout>
+      <Style.Section>
         <Style.TopContainer>
           <Style.ContainerLeft>
             <Style.UserImage>
@@ -34,11 +35,10 @@ const RedirectPage = () => {
               style={{
                 overflow: "visible",
                 whiteSpace: "normal",
-                wordBreak: "keep-all",
               }}
             >
-              안녕하세요! UXUI 공부중인 디자이너 지망생 00입니다
-              <br /> 같이 자유로운 분위기에서 공부하실 분을 찾고 있어요:)
+              안녕하세요! UXUI 공부중인 디자이너 지망생 00입니다 <br />
+              같이 자유로운 분위기에서 공부하실 분을 찾고 있어요:)
             </BodyText3>
           </Style.BottomDetail1>
           <Style.BottomTitle>
@@ -53,8 +53,21 @@ const RedirectPage = () => {
             </FilteredButton>
           </Style.BottomDetail2>
         </Style.BottomContainer>
-      </Style.SectionTop>
-    </MainLayout2>
+      </Style.Section>
+      <Style.Section>
+        <Style.BottomContainer>
+          <Style.BottomTitle>
+            <TitleText2>카페고리님이 모집중인 카공이에요</TitleText2>
+          </Style.BottomTitle>
+          <ListComponent />
+          <ListComponent />
+          <ListComponent />
+          <ListComponent />
+          <ListComponent />
+          <ListComponent />
+        </Style.BottomContainer>
+      </Style.Section>
+    </ProfileLayout>
   );
 };
 
