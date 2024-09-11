@@ -104,16 +104,14 @@ export const ContainerBottom = styled.div`
   overflow: auto;
 `;
 
-export const BottomSection = styled.div<{
-  $isSelected: boolean;
-}>`
+export const BottomSection = styled.div`
   width: 100%;
   height: 47px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0px 16px;
   border-bottom: 1px solid ${(props) => props.theme.colors.Mono};
-  background-color: ${(props) =>
-    props.$isSelected ? props.theme.colors.DarkerGreenBackGround : "white"};
+  background-color: white;
   cursor: pointer;
 `;

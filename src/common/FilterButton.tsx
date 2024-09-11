@@ -2,11 +2,9 @@ import styled from "styled-components";
 
 export const FilterButton = styled.button<{
   $backgroundColor?: string;
-  $border?: string;
 }>`
   background-color: ${(props) =>
     props.$backgroundColor ? props.$backgroundColor : "white"};
-  border: ${(props) => (props.$border ? props.$border : "none")};
   min-width: 143px;
   height: 40px;
   padding: 0 15px;
@@ -17,11 +15,11 @@ export const FilterButton = styled.button<{
   align-items: center;
   justify-content: space-around;
   background-color: white;
-  border: 1px solid var(--black-4, #454545);
+  border: none;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
   &:hover {
-    transition: 0.2s ease;
-    filter: brightness(95%);
-    border: 1px solid var(--black-4, #454545);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    border: none;
   }
   &:focus {
     outline: none;
@@ -30,14 +28,11 @@ export const FilterButton = styled.button<{
 
 export const FilteredButton = styled.button<{
   $backgroundColor?: string;
-  $border?: string;
 }>`
   background-color: ${(props) =>
     props.$backgroundColor
       ? props.$backgroundColor
       : props.theme.colors.DarkerGreenBackGround};
-  border: ${(props) => (props.$border ? props.$border : "none")};
-  border: 1px solid var(--black-4, #454545);
   padding: 0 15px;
   height: 40px;
   margin-right: 10px;
@@ -45,9 +40,10 @@ export const FilteredButton = styled.button<{
   display: flex;
   flex-direction: row;
   align-items: center;
+  border: none;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
   &:hover {
-    transition: 0.2s ease;
-    border: 1px solid var(--black-4, #454545);
+    border: none;
   }
   &:focus {
     outline: none;

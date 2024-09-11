@@ -24,8 +24,6 @@ export const MainLayout = styled.div`
   background-color: white;
 `;
 
-export const MainLayout2 = styled.div`
-  width: 100%;
+export const MainLayout2 = styled(MainLayout)`
   margin-top: ${HeaderHeight};
-  background-color: white;
 `;

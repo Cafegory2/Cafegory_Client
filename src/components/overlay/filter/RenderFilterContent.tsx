@@ -1,9 +1,11 @@
-import { BodyText1 } from "../../../common/Text";
+import { BodyText1Custom, TitleText2 } from "../../../common/Text";
 import useCafeStudyFilterStore from "../../../store/useCafeStudyFilterStore";
 import * as Style from "../styles";
 import { useEffect } from "react";
 import React from "react";
 import { FilterOption } from "../../../types/cafestudyfilterType";
+import GreenCheck from "../../../assets/GreenCheck.svg";
+import DetailButton from "../../../assets/FilterDetailShowButton.svg";
 
 const CategoryTmp = [
   "개발",
@@ -54,10 +56,14 @@ const RenderFilterContent = React.memo<PropType>(({ selectedCategory }) => {
           {CategoryTmp.map((category) => (
             <Style.BottomSection
               key={category}
-              $isSelected={categories.includes(category)} // isSelected prop 추가
               onClick={() => handleAddCategory(category)}
             >
-              <BodyText1>{category}</BodyText1>
+              <BodyText1Custom $isSelected={categories.includes(category)}>
+                {category}
+              </BodyText1Custom>
+              {categories.includes(category) ? (
+                <img src={GreenCheck} alt="체크표시" />
+              ) : null}
             </Style.BottomSection>
           ))}
         </Style.ContainerBottom>
@@ -68,12 +74,16 @@ const RenderFilterContent = React.memo<PropType>(({ selectedCategory }) => {
           {DateTmp.map((date) => (
             <Style.BottomSection
               key={date}
-              $isSelected={dates.includes(date)}
               onClick={() => {
                 handleAddDate(date);
               }}
             >
-              <BodyText1>{date}</BodyText1>
+              <BodyText1Custom $isSelected={dates.includes(date)}>
+                {date}
+              </BodyText1Custom>
+              {dates.includes(date) ? (
+                <img src={GreenCheck} alt="체크표시" />
+              ) : null}
             </Style.BottomSection>
           ))}
         </Style.ContainerBottom>
@@ -84,12 +94,12 @@ const RenderFilterContent = React.memo<PropType>(({ selectedCategory }) => {
           {CafeTmp.map((cafe) => (
             <Style.BottomSection
               key={cafe}
-              $isSelected={cafes.includes(cafe)}
               onClick={() => {
                 handleAddCafe(cafe);
               }}
             >
-              <BodyText1>{cafe}</BodyText1>
+              <TitleText2>{cafe}</TitleText2>
+              <img src={DetailButton} alt="디테일 표시" />
             </Style.BottomSection>
           ))}
         </Style.ContainerBottom>

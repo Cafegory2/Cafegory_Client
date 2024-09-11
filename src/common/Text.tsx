@@ -40,6 +40,11 @@ export const BodyText1 = styled(Text)`
   font-weight: 400;
 `;
 
+export const BodyText1Custom = styled(BodyText1)<{ $isSelected: boolean }>`
+  color: ${(props) =>
+    props.$isSelected ? props.theme.colors.GreenText : "black"};
+`;
+
 export const BodyText2 = styled(Text)`
   font-size: 14px;
   font-weight: 400;

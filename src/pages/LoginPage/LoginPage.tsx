@@ -1,4 +1,4 @@
-import * as Style from "./LoginPage.styles";
+import * as Style from "./styles";
 import Logo from "../../assets/Logo.svg";
 import { MonoBodyText2 } from "../../common/Text";
 import KakaoLogin from "../../components/login/KakaoLogin";

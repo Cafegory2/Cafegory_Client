@@ -8,6 +8,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RedirectPage from "./pages/RedirectPage/RedirectPage";
 import CafeStudyListPage from "./pages/CafeStudyPage/CafeStudyListPage";
 import CafeStudyDetailPage from "./pages/CafeStudyPage/CafeStudyDetailPage";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import { CafeStudySearchPage } from "./pages/CafeStudyPage/CafeStudySearchPage";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/theme";
@@ -41,6 +42,7 @@ function App() {
                     element={<CafeStudySearchPage />}
                   ></Route>
                 </Route>
+                <Route path="/profile" element={<ProfilePage />}></Route>
               </Routes>
             </BrowserRouter>
           </MobileLayout>
