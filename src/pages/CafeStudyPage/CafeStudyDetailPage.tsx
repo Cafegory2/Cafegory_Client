@@ -1,11 +1,11 @@
-import { MainLayout2 } from "../../styles/Layout.styles";
+import { DetailPageLayout } from "../../styles/Layout.styles";
 import DetailComponent from "../../components/cafestudyDetail/DetailComponent";
 
 const CafeStudyDetailPage = () => {
   return (
-    <MainLayout2>
+    <DetailPageLayout>
       <DetailComponent />
-    </MainLayout2>
+    </DetailPageLayout>
   );
 };
 

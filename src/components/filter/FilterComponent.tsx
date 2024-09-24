@@ -60,6 +60,7 @@ export const FilterComponent = () => {
                   onClick={() => {
                     handleToggleCategory(category);
                   }}
+                  style={{ cursor: "pointer" }}
                 />
               </FilteredButton>
             ))
