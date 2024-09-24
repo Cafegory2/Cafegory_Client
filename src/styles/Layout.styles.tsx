@@ -24,13 +24,13 @@ export const MainLayout = styled.div`
   background-color: white;
 `;
 
-export const MainLayout2 = styled.div<{
-  $padding?: string;
-}>`
-  width: 100%;
+export const DetailPageLayout = styled(MainLayout)`
   margin-top: ${HeaderHeight};
-  padding: ${(props) => props.$padding || '0px' };
-  background-color: white;
+  padding: 0px;
+`;
+
+export const ProfileLayout = styled(MainLayout)`
+  margin-top: ${HeaderHeight};
 `;
 
 export const NoResultLayout = styled.div`

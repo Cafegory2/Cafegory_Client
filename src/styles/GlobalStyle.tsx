@@ -40,9 +40,6 @@ body {
  	-ms-user-select: none;     
  	user-select: none;      
 }
-p{
-	font-family: 'Noto Sans KR', 'Roboto'; 
-}
 a {
 	text-decoration: none;
 	color: inherit
