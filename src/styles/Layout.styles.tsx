@@ -24,6 +24,13 @@ export const MainLayout = styled.div`
   background-color: white;
 `;
 
+export const RedirectLayout = styled(MainLayout)`
+  margin-top: ${HeaderHeight};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const DetailPageLayout = styled(MainLayout)`
   margin-top: ${HeaderHeight};
   padding: 0px;

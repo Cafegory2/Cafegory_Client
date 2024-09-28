@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { MainLayout } from "../../styles/Layout.styles";
+import { RedirectLayout } from "../../styles/Layout.styles";
 import { useGetKakaoToken } from "../../hooks/useGetKakaoToken";
+import { TitleText1 } from "../../common/Text";
 
 const RedirectPage = () => {
   const [code, setCode] = useState<string | null>(null);
-  const navigate = useNavigate();
 
   const { tokens } = useGetKakaoToken(code);
-
   useEffect(() => {
     const search = window.location.search;
     const params = new URLSearchParams(search);
@@ -23,11 +21,15 @@ const RedirectPage = () => {
     if (tokens) {
       localStorage.setItem("accessToken", tokens.accessToken);
       localStorage.setItem("refreshToken", tokens.refreshToken);
-      navigate("/");
+      window.location.href = "/cafestudy/lists";
     }
-  }, [tokens, navigate]);
+  }, [tokens]);
 
-  return <MainLayout></MainLayout>;
+  return (
+    <RedirectLayout>
+      <TitleText1>리다이렉트 중...</TitleText1>
+    </RedirectLayout>
+  );
 };
 
 export default RedirectPage;
