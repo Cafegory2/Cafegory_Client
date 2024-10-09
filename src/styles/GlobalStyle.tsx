@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { fonts } from "./fonts";
 const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -20,8 +19,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	vertical-align: baseline;
 	box-sizing: border-box;
+	font-family: 'Noto Sans KR', 'Roboto'; 
 }
-${fonts}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section, main {
@@ -32,12 +31,14 @@ html{
 	height: 100%;
 }
 body {
-	line-height: 1;
+	line-height: normal;
 	width: 100%;
 	height: 100%;
-}
-p{
-	font-family: 'Noto Sans KR', 'Roboto'; 
+	//드래그 불가능하게 설정
+	-webkit-user-select: none; 
+  	-moz-user-select: none;   
+ 	-ms-user-select: none;     
+ 	user-select: none;      
 }
 a {
 	text-decoration: none;

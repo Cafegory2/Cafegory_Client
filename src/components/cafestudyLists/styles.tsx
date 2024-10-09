@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { Color } from "../../constants";
 
 export const Container = styled.div`
   width: 100%;
   height: 162px;
   border-radius: 10px;
-  margin: 12px 0px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  margin-bottom: 12px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -20,6 +20,7 @@ export const ContainerLeft = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
 `;
 
 export const ContainerRight = styled.div`
@@ -34,15 +35,25 @@ export const TagContainer = styled.div`
   height: 15%;
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 10px;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 `;
 
 export const Tag = styled.div`
-  padding: 4px 8px;
-  display: inline-flex;
-  background-color: ${Color.MonoTag};
+  padding: 2px 8px;
+  display: flex;
+  align-items: center;
+  background-color: ${(props) => props.theme.colors.Mono};
   border-radius: 22px;
+`;
+
+export const GreenTag = styled(Tag)`
+  background-color: ${(props) => props.theme.colors.DarkerGreenBackGround};
 `;
 
 export const TitleContainer = styled.div`
@@ -97,6 +108,6 @@ export const HeadCount = styled.div`
   bottom: 6px;
   display: flex;
   align-items: center;
-  background-color: ${Color.HeadCount};
+  background-color: ${(props) => props.theme.colors.HeadCount};
   border-radius: 22px;
 `;

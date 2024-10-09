@@ -10,7 +10,7 @@ const GoogleLogin = () => {
         alt="GoogleLogo"
         style={{ position: "absolute", left: 21 }}
       />
-      <Text $fontSize={20} $fontWeight={400}>
+      <Text $fontSize={16} $fontWeight={400}>
         GOOGLE로 로그인
       </Text>
     </LoginButton>

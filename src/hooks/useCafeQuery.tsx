@@ -14,7 +14,7 @@ export const useCafeQuery = () => {
     isLoading: isCafeListLoading,
     isError: isCafeListError,
     data: cafeListState,
-  } = useQuery<CafeList[]>({
+  } = useQuery({
     queryKey: [queryKeys.cafeLists],
     queryFn: fetchCafeList,
   });
