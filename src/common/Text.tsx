@@ -21,6 +21,26 @@ export const Text = styled.p<{
   width: auto;
 `;
 
+export const LogoTextBigL = styled(Text)`
+  font-size: 40px;
+  font-weight: 700;
+  color: ${(props) => props.theme.colors.Black};
+`;
+
+export const LogoTextBigR = styled(LogoTextBigL)`
+  color: ${(props) => props.theme.colors.GreenText};
+`;
+
+export const LogoTextL = styled(Text)`
+  font-size: 30px;
+  font-weight: 700;
+  color: ${(props) => props.theme.colors.Black};
+`;
+
+export const LogoTextR = styled(LogoTextL)`
+  color: ${(props) => props.theme.colors.GreenText};
+`;
+
 export const TitleText1 = styled(Text)`
   font-size: 22px;
   font-weight: 700;

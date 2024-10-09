@@ -6,7 +6,7 @@ export const FilterButton = styled.button<{
   background-color: ${(props) =>
     props.$backgroundColor ? props.$backgroundColor : "white"};
   min-width: 143px;
-  height: 40px;
+  height: 32px;
   padding: 0 15px;
   margin-right: 10px;
   border-radius: 38px;
@@ -34,7 +34,7 @@ export const FilteredButton = styled.button<{
       ? props.$backgroundColor
       : props.theme.colors.DarkerGreenBackGround};
   padding: 0 15px;
-  height: 40px;
+  height: 32px;
   margin-right: 10px;
   border-radius: 38px;
   display: flex;

@@ -108,7 +108,7 @@ const DetailComponent = () => {
             </BodyText3>
           </Style.DetailBody>
         </Style.ContainerDetail>
-        <Style.ContainerDetail style={{ marginBottom: "90px" }}>
+        <Style.ContainerDetail style={{ marginBottom: "120px" }}>
           <Style.DetailTitle>
             <GreenTitleText2>Q&A</GreenTitleText2>
           </Style.DetailTitle>

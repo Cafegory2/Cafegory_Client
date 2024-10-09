@@ -19,3 +19,10 @@ export const HeaderLayout = styled.header`
   align-items: center;
   background-color: white;
 `;
+
+export const LogoContainer = styled.div`
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;

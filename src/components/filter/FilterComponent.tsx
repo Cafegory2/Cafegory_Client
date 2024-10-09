@@ -45,9 +45,6 @@ export const FilterComponent = () => {
             <TitleText2>필터링 검색</TitleText2>
           </Style.FilterTextContainer>
         </FilterButton>
-        {categories.length > 0 || dates.length > 0 || cafes.length > 0 ? (
-          <Style.FilterBar>|</Style.FilterBar>
-        ) : null}
         {categories
           ? categories.map((category) => (
               <FilteredButton key={category}>

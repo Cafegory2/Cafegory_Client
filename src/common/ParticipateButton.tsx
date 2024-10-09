@@ -11,7 +11,7 @@ export const ParticipateButton = styled.button<{
   border: ${(props) => (props.$border ? props.$border : "none")};
   padding: 10px 32px;
   position: fixed;
-  bottom: 25px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   &:hover {
