@@ -51,6 +51,10 @@ export const TitleText2 = styled(Text)`
   font-weight: 700;
 `;
 
+export const GreenTitleText1 = styled(TitleText1)`
+  color: ${(props) => props.theme.colors.GreenText};
+`;
+
 export const GreenTitleText2 = styled(TitleText2)`
   color: ${(props) => props.theme.colors.GreenText};
 `;

@@ -38,6 +38,10 @@ export const DetailPageLayout = styled(MainLayout)`
   padding: 0px;
 `;
 
+export const CreatePageLayout = styled(MainLayout)`
+  margin-top: ${HeaderHeight};
+`;
+
 export const ProfileLayout = styled(MainLayout)`
   margin-top: ${HeaderHeight};
 `;
